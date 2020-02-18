@@ -14,7 +14,7 @@ include('config.php');
 
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Projekt</title>
+    <title>Den lille urtegård</title>
   </head>
   <body>
 
