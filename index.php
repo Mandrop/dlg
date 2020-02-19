@@ -1,3 +1,7 @@
+<?php
+include('config.php');
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,21 +16,67 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <?php
 
-    <form method='post'>
-        <select>
-            <option>hej</option>
-            <option>he3j</option>
-            <option>he3333j</option>
-
-        </select>
-
+if ($db) {
+  echo 'connected<br>';
+} else {
+  echo 'not connected';
+}
 
 
+      /*$sql = "SHOW TABLES FROM $db";
+      $sqlQuery = $db->query($sql);*/
+
+      $sql = ("SHOW TABLES FROM dlg");
+      $sqlQuery = $db -> query($sql);
+
+      if($sqlQuery){
+        while($table = mysqli_fetch_array($sqlQuery)) { // go through each row that was returned in $result
+          echo($table[0] . "<br>");    // print the table that was returned on that row.
+      }
+      }else{
+        echo "Fail";
+      }
+      
+      /*while($table = mysql_fetch_array($sqlQuery)) { // go through each row that was returned in $result
+        echo($table[0] . "<br>");    // print the table that was returned on that row.
+    }*/
 
 
 
-    </form>
+
+
+    ?>
+
+    <?php
+
+    if (isset($_POST['insert'])){
+      ($_GET['page']);
+
+      $sql = "SELECT * FROM pages";
+
+
+
+
+
+      $result = $_POST['insert'];
+      echo $result;
+    }
+
+    echo "
+      <form action='#' method='POST'>
+          <select onchange='this.form.submit()' name='insert'>
+              <option value='none'>Indsæt element</option>
+              <option value='Header'>Header</option>
+              <option value='Paragraph'>Paragraph</option>
+              <option value='Pik'>Pik</option>
+          </select>
+      </form>
+    ";
+    
+
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
