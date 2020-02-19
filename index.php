@@ -12,75 +12,73 @@ include('config.php');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Projekt</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <h1>Frederik!!!</h1>
-    <h1>Henrik</h1>
-     <h1>Henrik</h1>
-    <h1>Frederik2</h1>
-    <?php
 
-if ($db) {
-  echo 'connected<br>';
-} else {
-  echo 'not connected';
-}
-
-
-      /*$sql = "SHOW TABLES FROM $db";
-      $sqlQuery = $db->query($sql);*/
-
-      $sql = ("SHOW TABLES FROM dlg");
-      $sqlQuery = $db -> query($sql);
-
-      if($sqlQuery){
-        while($table = mysqli_fetch_array($sqlQuery)) { // go through each row that was returned in $result
-          echo($table[0] . "<br>");    // print the table that was returned on that row.
-      }
-      }else{
-        echo "Fail";
-      }
-      
-      /*while($table = mysql_fetch_array($sqlQuery)) { // go through each row that was returned in $result
-        echo($table[0] . "<br>");    // print the table that was returned on that row.
-    }*/
-
-
-
-
-
-    ?>
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
 
     <?php
+    $sql = "SELECT * FROM pages";
+    $sqlQuery = $db->query($sql);
 
-    if (isset($_POST['insert'])){
-      ($_GET['page']);
-
-      $sql = "SELECT * FROM pages";
-
-
-
-
-
-      $result = $_POST['insert'];
-      echo $result;
+    if($sqlQuery){
+        while($dbFetch = $sqlQuery->fetch_object()){
+            echo "
+                 <li class='nav-item active'>
+                    <a class='nav-link' href='?page=$dbFetch->page_slug'> $dbFetch->page_title 
+                    <span class='sr-only'>(current)</span></a>
+                </li>
+            ";
+        }
     }
 
-    echo "
-      <form action='#' method='POST'>
-          <select onchange='this.form.submit()' name='insert'>
-              <option value='none'>Indsæt element</option>
-              <option value='Header'>Header</option>
-              <option value='Paragraph'>Paragraph</option>
-              <option value='Pik'>Pik</option>
-          </select>
-      </form>
-    ";
+      //<li class="nav-item active">
+      //  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      //</li>
+
+      ?>
+    </ul>
+  </div>
+</nav>
+
+<?php
+
+    // HENT DATA FRA PAGE TABEL
+    $slug = $_GET['page'];
+
+    $sql = "SELECT * FROM pages WHERE page_slug='$slug'";
+    $sqlQuery = $db->query($sql);
+
+
+    if($sqlQuery){
+        $dbFetch = $sqlQuery->fetch_object();
+    }else{
+        echo "Couldn't fetch Object";
+    }
+    // EXIT
+
+    // UDSKRIV DATA TIL SIDEN
+    echo "<h1>$dbFetch->page_title</h1>";
+    echo "<p>$dbFetch->page_content</p>";
+
+    if($dbFetch->page_image){
+        echo "<img src='admin/uploads/$dbFetch->page_image'></img>";
+    }
+
     
 
-    ?>
+?>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
