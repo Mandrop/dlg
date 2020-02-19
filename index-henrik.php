@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Oswald:300,400,500&display=swap" rel="stylesheet">
     <title>Den lille gårdbutik</title>
   </head>
   <body>
@@ -15,31 +16,43 @@
 
     <header>
     <!-- BOOTSTRAP NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg bg-oko-green">
+  <a class="navbar-brand header-logo-container position-relative" href="#">
+  <div class="container header-logo d-flex justify-content-center align-items-center">
+  <p class="h1">Den lille Gårdbutik</p>
+  </div>
+
+  </a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">FORSIDE <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">PRODUKTER</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">OM OS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="#">KONTAKT</a>
       </li>
+
+ 
+   
     </ul>
+        <!-- KURV -->
+          <a class=" d-flex align-self-end" href="#">KURV <img class="kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
+           <!-- KURV -->
   </div>
 </nav>
     <!-- BOOTSTRAP NAVBAR END -->
-    <div class="container">
-    <img src="..." class="img-fluid" alt="Responsive image">
+    <div class="header-img">
+    
     </div>
     </header>
 

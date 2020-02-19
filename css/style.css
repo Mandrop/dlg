@@ -1,5 +1,54 @@
 /* CSS - MAIN */
 
-body{
+/* FONT 
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Amatic SC', cursive;
+
+*/
+
+*{
+
+font-family: 'Oswald', sans-serif;
+/* FONT */
+}
+
+/* NAV BAR */
+
+.bg-oko-green{
+    background-color: #374A00;
+}
+
+.navbar{
+    padding: 0 1rem;  
+}
+.navbar a{
+    color: white;
     
 }
+
+.header-img{
+    background: white url('../images/gaardbutik.jpg') no-repeat center center /cover;
+    height: 150px;
+}
+
+.header-logo-container{
+    top:-20px;
+    
+}
+
+.header-logo-container p{
+     color: #374A00;
+     font-family: 'Amatic SC', cursive;
+}
+
+.header-logo{
+    background-color: white;
+    height: 50px;  
+}
+
+.kurv-logo{
+    height: 30px;
+}
+
+/* NAV BAR */
