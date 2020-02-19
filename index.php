@@ -19,6 +19,7 @@ include('config.php');
     <h1>Frederik!!!</h1>
     <h1>Henrik</h1>
      <h1>Henrik</h1>
+    <h1>Frederik2</h1>
     <?php
 
 if ($db) {
