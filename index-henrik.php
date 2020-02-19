@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
     <title>Den lille gårdbutik</title>
   </head>
   <body>
@@ -38,6 +38,9 @@
   </div>
 </nav>
     <!-- BOOTSTRAP NAVBAR END -->
+    <div class="container">
+    <img src="..." class="img-fluid" alt="Responsive image">
+    </div>
     </header>
 
     <!-- Optional JavaScript -->
