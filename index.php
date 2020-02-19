@@ -1,7 +1,3 @@
-<?php
-include('config.php');
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,73 +8,25 @@ include('config.php');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Den lille urtegård</title>
+    <title>Hello, world!</title>
   </head>
   <body>
+    <h1>Hello, world!</h1>
 
-  <!-- Bootstrap Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Den lille urtegård</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <form method='post'>
+        <select>
+            <option>hej</option>
+            <option>he3j</option>
+            <option>he3333j</option>
 
-    <?php
-    $sql = "SELECT * FROM pages";
-    $sqlQuery = $db->query($sql);
-
-    if($sqlQuery){
-        while($dbFetch = $sqlQuery->fetch_object()){
-            echo "
-                 <li class='nav-item active'>
-                    <a class='nav-link' href='?page=$dbFetch->page_slug'> $dbFetch->page_title 
-                    <span class='sr-only'>(current)</span></a>
-                </li>
-            ";
-        }
-    }
-
-      //<li class="nav-item active">
-      //  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      //</li>
-
-      ?>
-    </ul>
-  </div>
-</nav>
-
-<?php
-
-    // HENT DATA FRA PAGE TABEL
-    $slug = $_GET['page'];
-
-    $sql = "SELECT * FROM pages WHERE page_slug='$slug'";
-    $sqlQuery = $db->query($sql);
+        </select>
 
 
-    if($sqlQuery){
-        $dbFetch = $sqlQuery->fetch_object();
-    }else{
-        echo "Couldn't fetch Object";
-    }
-    // EXIT
 
-    // UDSKRIV DATA TIL SIDEN
-    echo "<h1>$dbFetch->page_title</h1>";
-    echo "<p>$dbFetch->page_content</p>";
 
-    if($dbFetch->page_image){
-        echo "<img src='admin/uploads/$dbFetch->page_image'></img>";
-    }
 
-    
 
-?>
-    
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
