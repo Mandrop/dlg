@@ -8,6 +8,11 @@ font-family: 'Amatic SC', cursive;
   font-family: "Oswald", sans-serif;
   /* FONT */
 }
+
+.red-header{
+    color: #e30613;
+}
+
 /* NAV BAR */
 .bg-oko-green {
   background-color: #374a00;
@@ -50,3 +55,23 @@ h1 {
   margin-left: auto;
 }
 /* NAV BAR */
+
+
+/* OM OS SIDE */
+
+.om-os-img{
+  width: 40%;
+  height: 400px;
+  object-fit: cover;
+
+}
+
+ /* // Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+
+.om-os-img{
+        width: 100%;
+} 
+
+
+/* OM OS SIDE */
