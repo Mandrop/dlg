@@ -102,34 +102,40 @@ include('config.php');
 
 
 <div class="container main-content">
-<div class="card-deck">
+  <div class="container">
+  <h1 class='big-h1'>Udvalgte produkter</h1>
+<div class="card-deck udvalgte-produkter">
   <div class="card">
-    <img class="card-img-top" src="images/mel-flour-white-bg.jpg" alt="Card image cap">
+    <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Økologisk hvedemel</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
+      <p class='price'>29,95 kr</p>
+      <a href="#" class="fake-btn">LÆG I KURV</a>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/oeko-oel-white-bg.jpg" alt="Card image cap">
+    <img class="card-img-top" src="images/oel2.png" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Økologisk rug øl</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
+      <p class='price'>39,95 kr</p>
+      <a href="#" class="fake-btn">LÆG I KURV</a>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/rapsolie-white-bg.jpg" alt="Card image cap">
+    <img class="card-img-top" src="images/provoiant-rapsolie-citron.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Økologisk rapsolie</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
+      <p class='price'>59,95 kr</p>
+      <a href="#" class="fake-btn">LÆG I KURV</a>
     </div>
   </div>
 </div>
 
 </div>
+  </div>
 
 <?php
 
