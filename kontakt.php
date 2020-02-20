@@ -14,7 +14,7 @@
   <body>
     <h1>Hello, HENRIK!</h1>
 
-<!-- OM OS -->
+<!-- KONTAKT -->
 
 <div class="jumbotron jumbotron-fluid bg-white shadow-sm">
   <div class="container d-flex flex-column align-items-center">
@@ -63,7 +63,7 @@
   </div>
 </div>
 
-<!-- OM OS -->
+<!-- KONTAKT -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
