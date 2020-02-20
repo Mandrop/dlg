@@ -14,27 +14,56 @@
   <body>
     <h1>Hello, HENRIK!</h1>
 
-<!-- OM OS -->
+<!-- KONTAKT -->
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid bg-white shadow-sm">
   <div class="container d-flex flex-column align-items-center">
-    <h1 class="display-4 mb-5 red-header">om DEN LILLE GÅRDBUTIK</h1>
-    <div class="container d-flex align-items-center align-items-md-start justify-content-md-center flex-column flex-md-row om-os-container">
-     <p class="lead mr-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa unde earum nemo iste, 
-         labore, asperiores consequuntur quasi pariatur quam facilis quod provident?<br>
-         Expedita nobis hic itaque saepe? Quos illo fuga quasi autem vero! Expedita dolor a doloribus aliquid 
-         ipsum sequi quo, fuga fugit ab dicta vitae, <br> atque suscipit! Similique rerum impedit at tempore nobis 
-         quaerat sequi culpa rem autem repellendus. Tempora sunt consectetur similique laborum optio atque inventore eos 
-         voluptatibus nobis ipsam doloribus quos quia nisi blanditiis, exercitationem quasi neque dicta vel architecto. 
+    <h1 class="display-4 mb-5 red-header">KONTAKT</h1>
+    <div class="container d-flex align-items-center align-items-md-start justify-content-md-center flex-column flex-md-row ">
+        <section  class="mr-4 p-4 text-center text-md-left">
+        <h2>Adresse</h2>
+        <p class="font-weight-light">
+        Den lille gårdbutik <br>
+        Gårdvej 1 <br>
+        8800 Viborg</p>
 
-</p>
-     <img class="img-fluid om-os-img rounded" src="images/farm-house.jpg" alt="Den lille gårdbutik">
+        <h2>Kontakt</h2>
+        <p class="font-weight-light">
+        Telefon:
+        11223344 <br>
+        Email: info@denlillegårdbutik.dk</p>
+
+        <h2>Åbningstider</h2>
+        <div class="d-flex">
+        <div class="mr-5">
+        <p class="font-weight-light">
+        Mandag - torsdag:<br>
+        Fredag: <br>
+        Lørdag og søndag:</p>
+        </div>
+
+        <div>
+        <p class="font-weight-light">
+        09:00 - 17:30<br>
+        09:00 - 18:00 <br>
+        10:00 - 14:00</p>
+        </div>
+</div>
+
+
+
+    
+    </section>
+<div>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141175.36819564193!2d9.168949477084226!3d56.43562338301524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464bdaa13b836803%3A0x71bd363fc749b3c7!2s8800%20Viborg!5e0!3m2!1sda!2sdk!4v1582195117956!5m2!1sda!2sdk" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+    
     </div>
 
   </div>
 </div>
 
-<!-- OM OS -->
+<!-- KONTAKT -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

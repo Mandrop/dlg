@@ -1,12 +1,18 @@
 /* HENRIK LAST CHANGE */
 /* CSS - MAIN */
-/* FONT 
+/* FONT FAMILY TEMPLATES
 font-family: 'Oswald', sans-serif;
 font-family: 'Amatic SC', cursive;
 */
 * {
+ /* FONT */
   font-family: "Oswald", sans-serif;
   /* FONT */
+}
+
+h1,h2,h3,h4 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
 }
 
 .red-header{
@@ -35,10 +41,7 @@ font-family: 'Amatic SC', cursive;
 .header-logo-container {
   top: -20px;
 }
-h1 {
-  font-family: "Oswald", sans-serif;
-  font-family: "Amatic SC", cursive;
-}
+
 .header-logo-container p {
   color: #374a00;
   font-family: "Amatic SC", cursive;
