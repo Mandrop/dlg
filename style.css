@@ -53,11 +53,33 @@ body {
   color: white;
 }
 
-.card {
+.product-card {
   width: 50px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* NEWS */
+.news-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.news {
+  background-color: #374a00;
+  color: white;
+}
+.card-title-news {
+  color: white;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+.text-muted {
+  color: lightgray;
+}
+.card-text-news {
+  font-size: 1.1rem;
 }
 
 /* FOOTER */

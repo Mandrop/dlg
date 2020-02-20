@@ -105,7 +105,7 @@ include('config.php');
   <div class="container">
   <h1 class='big-h1'>Udvalgte produkter</h1>
 <div class="card-deck udvalgte-produkter">
-  <div class="card">
+  <div class="card product-card">
     <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk hvedemel</h5>
@@ -114,7 +114,7 @@ include('config.php');
       <a href="#" class="fake-btn">LÆG I KURV</a>
     </div>
   </div>
-  <div class="card">
+  <div class="card product-card">
     <img class="card-img-top" src="images/oel2.png" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk rug øl</h5>
@@ -123,7 +123,7 @@ include('config.php');
       <a href="#" class="fake-btn">LÆG I KURV</a>
     </div>
   </div>
-  <div class="card">
+  <div class="card product-card">
     <img class="card-img-top" src="images/provoiant-rapsolie-citron.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk rapsolie</h5>
@@ -133,8 +133,34 @@ include('config.php');
     </div>
   </div>
 </div>
-
 </div>
+
+<div class="container">
+<div class="card mb-3 news" style="max-width: 50%;">
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <!--<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>-->
+      <img class="bd-placeholder-img news-img"  src="images/rod-frugt.jpg" alt="">
+
+    </div>
+    <div class="col-md-6">
+      <div class="card-body card-body-news">
+        <h5 class="card-title card-title-news"><b>ROER</b> i butikken</h5>
+        <div class="card-text-news-container">
+        <p class="card-text card-text-news">Årets høst er lige kommet i hus og der er overflod af skønne rod-frugter i butikken</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
   </div>
 
 <?php
