@@ -28,7 +28,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav d-flex ">
       <li class="nav-item active">
         <a class="nav-link" href="#">FORSIDE <span class="sr-only">(current)</span></a>
       </li>
@@ -41,13 +41,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">KONTAKT</a>
       </li>
+      <li class="nav-item nav-bar-last-item">
+        <!-- KURV -->
+          <a class="nav-link d-flex align-items-center" href="#">KURV <img class="navbar-kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
+           <!-- KURV -->
+      </li>
 
  
    
     </ul>
-        <!-- KURV -->
-          <a class=" d-flex align-self-end" href="#">KURV <img class="kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
-           <!-- KURV -->
+
   </div>
 </nav>
     <!-- BOOTSTRAP NAVBAR END -->
