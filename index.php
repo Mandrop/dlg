@@ -12,7 +12,9 @@ include('config.php');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Oswald:300,400,500&display=swap" rel="stylesheet">
 
     <title>Projekt</title>
   </head>
@@ -77,12 +79,43 @@ include('config.php');
 
     
 
-?>
-    <footer>
-      
+?> 
 
-    
-    
+
+    <div class="container"></div>
+    <footer>
+      <div class="container contact-info">
+  <div class="row">
+    <div class="col">
+      <span class='fake-heading'><p>Adresse</p></span>
+      <p>Den lille gårdbutik</p>
+      <p>Gårdvej 1</p>
+      <p>Viborg 8800</p>
+    </div>
+    <div class="col-6">
+      <span class='fake-heading'><p>Kontakt</p></span>
+      <p>11 22 33 44</p>
+      <p>denlillegaardbutik@gmail.dk</p>
+    </div>
+    <div class="col">
+      <span class='fake-heading'><p>Åbningstider</p></span>
+      <p>Mandag - Torsdag   09:00 - 17:30</p>
+      <p>Fredag   09:00 - 18:00</p>
+      <p>Lørdag - Søndag  10:00 - 13:00</p>
+    </div>
+  </div>
+</div>
+
+<hr class='hr-white'>
+
+<form method='post'>
+
+  <p class='big-paragraph'>Send os en besked</p>
+  <input class='d-block' type="text" placeholder='Navn' name='formName'></input>
+  <input class='d-block' type='email' placeholder='Email' name='formEmail'></input>
+  <textarea class='d-block' name="formText" placeholder='Besked' id="" cols="30" rows="10"></textarea>
+  <input class='d-block submit' type="submit">
+</form>
     </footer>
 
     <!-- Optional JavaScript -->
