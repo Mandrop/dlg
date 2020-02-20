@@ -1,65 +1,50 @@
+/* HENRIK LAST CHANGE */
 /* CSS - MAIN */
-
 /* FONT 
-
 font-family: 'Oswald', sans-serif;
 font-family: 'Amatic SC', cursive;
-
 */
-
-*{
-
-font-family: 'Oswald', sans-serif;
-/* FONT */
+* {
+  font-family: "Oswald", sans-serif;
+  /* FONT */
 }
-
 /* NAV BAR */
-
-.bg-oko-green{
-    background-color: #374A00;
+.bg-oko-green {
+  background-color: #374a00;
 }
-
-.navbar{
-    padding: 0 1rem;  
+.navbar {
+  padding: 0 1rem;
 }
-
-.navbar-nav{
-    width: 100%;
+.navbar-nav {
+  width: 100%;
 }
-.navbar a{
-    color: white;
-    
+.navbar a {
+  color: white;
 }
-
-.header-img{
-    background: white url('../images/gaardbutik.jpg') no-repeat center center /cover;
-    height: 150px;
+.header-img {
+  background: white url("../images/gaardbutik.jpg") no-repeat center center /
+    cover;
+  height: 150px;
 }
-
-.header-logo-container{
-    top:-20px;
+.header-logo-container {
+  top: -20px;
 }
 h1 {
   font-family: "Oswald", sans-serif;
   font-family: "Amatic SC", cursive;
 }
-
 .header-logo-container p {
   color: #374a00;
   font-family: "Amatic SC", cursive;
 }
-
 .header-logo {
   background-color: white;
   height: 50px;
 }
-
-.navbar-kurv-logo{
-    height: 30px;
+.navbar-kurv-logo {
+  height: 30px;
 }
-
-.nav-bar-last-item{
-    margin-left: auto;
+.nav-bar-last-item {
+  margin-left: auto;
 }
-
 /* NAV BAR */
