@@ -114,7 +114,7 @@ include('config.php');
   <input class='d-block' type="text" placeholder='Navn' name='formName'></input>
   <input class='d-block' type='email' placeholder='Email' name='formEmail'></input>
   <textarea class='d-block' name="formText" placeholder='Besked' id="" cols="30" rows="10"></textarea>
-  <input class='d-block submit' type="submit">
+  <input class='d-block submit' type="submit" value='Send'>
 </form>
     </footer>
 
