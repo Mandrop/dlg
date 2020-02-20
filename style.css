@@ -3,6 +3,12 @@ body {
   font-weight: 300;
 }
 
+/* MAIN CONTENT */
+
+.main-content {
+  background-color: red;
+}
+
 /* FOOTER */
 footer {
   padding: 25px 0 50px 0;
@@ -24,7 +30,7 @@ footer .row {
   width: 50%;
   border-radius: 200px;
 }
-.fake-heading {
+footer span p {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   font-size: 2.2rem;

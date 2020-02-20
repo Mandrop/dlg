@@ -13,15 +13,62 @@ include('config.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Oswald:300,400,500&display=swap" rel="stylesheet">
 
     <title>Projekt</title>
   </head>
+
   <body>
+  <h1>Hello, HENRIK!</h1>
+  <header>
+    <!-- BOOTSTRAP NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-oko-green">
+  <a class="navbar-brand header-logo-container position-relative" href="#">
+  <div class="container header-logo d-flex justify-content-center align-items-center">
+  <p class="h1">Den lille Gårdbutik</p>
+  </div>
+
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav d-flex ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">FORSIDE <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">PRODUKTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">OM OS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">KONTAKT</a>
+      </li>
+      <li class="nav-item nav-bar-last-item">
+        <!-- KURV -->
+          <a class="nav-link d-flex align-items-center" href="#">KURV <img class="navbar-kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
+           <!-- KURV -->
+      </li>
+
+ 
+   
+    </ul>
+
+  </div>
+</nav>
+    <!-- BOOTSTRAP NAVBAR END -->
+    <div class="header-img">
+    
+    </div>
+    </header>
 
   <!-- Bootstrap Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,7 +76,7 @@ include('config.php');
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
 
-    <?php
+    <?php/*
     $sql = "SELECT * FROM pages";
     $sqlQuery = $db->query($sql);
 
@@ -48,10 +95,41 @@ include('config.php');
       //  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       //</li>
 
-      ?>
+      */ ?>
     </ul>
   </div>
-</nav>
+</nav>-->
+
+
+<div class="container main-content">
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="images/mel-flour-white-bg.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/oeko-oel-white-bg.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/rapsolie-white-bg.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+</div>
 
 <?php
 
