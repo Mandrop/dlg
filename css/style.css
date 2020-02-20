@@ -38,17 +38,20 @@ font-family: 'Oswald', sans-serif;
 
 .header-logo-container{
     top:-20px;
-    
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-family: "Amatic SC", cursive;
 }
 
-.header-logo-container p{
-     color: #374A00;
-     font-family: 'Amatic SC', cursive;
+.header-logo-container p {
+  color: #374a00;
+  font-family: "Amatic SC", cursive;
 }
 
-.header-logo{
-    background-color: white;
-    height: 50px;  
+.header-logo {
+  background-color: white;
+  height: 50px;
 }
 
 .navbar-kurv-logo{
