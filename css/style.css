@@ -41,8 +41,10 @@ h1 {
   background-color: white;
   height: 50px;
 }
-.navbar-kurv-logo {
-  height: 30px;
+
+.navbar-kurv-logo{
+    height: 20px;
+    margin-left: 10px;
 }
 .nav-bar-last-item {
   margin-left: auto;
