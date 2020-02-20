@@ -59,9 +59,13 @@ h1 {
 
 /* OM OS SIDE */
 
+.om-os-container{
+    background-color: white;
+}
+
 .om-os-img{
   width: 40%;
-  height: 400px;
+  height: 600px;
   object-fit: cover;
 
 }
