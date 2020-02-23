@@ -60,6 +60,20 @@ body {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
+
+/* PRODUKT SIDE */
+
+.produkter .card {
+  width: 25%;
+}
+
+.produkter .card-deck .card{
+  flex-basis: auto;
+  margin-bottom: 15px;
+}
+
+/* PRODUKT SIDE */
+
 /* FOOTER */
 footer {
   padding: 25px 0 50px 0;
