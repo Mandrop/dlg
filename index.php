@@ -21,51 +21,13 @@ include('config.php');
   </head>
 
   <body>
-  <h1>Hello, HENRIK!</h1>
-  <header>
-    <!-- BOOTSTRAP NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-oko-green">
-  <a class="navbar-brand header-logo-container position-relative" href="#">
-  <div class="container header-logo d-flex justify-content-center align-items-center">
-  <p class="h1">Den lille Gårdbutik</p>
-  </div>
+  
+<!-- HEADER START -->
+<?php
+include ('elements/header.php');
+?>
+<!-- HEADER END -->
 
-  </a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav d-flex ">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">FORSIDE <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">PRODUKTER</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">OM OS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">KONTAKT</a>
-      </li>
-      <li class="nav-item nav-bar-last-item">
-        <!-- KURV -->
-          <a class="nav-link d-flex align-items-center" href="#">KURV <img class="navbar-kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
-           <!-- KURV -->
-      </li>
-
- 
-   
-    </ul>
-
-  </div>
-</nav>
-    <!-- BOOTSTRAP NAVBAR END -->
-    <div class="header-img">
-    
-    </div>
-    </header>
 
   <!-- Bootstrap Navbar -->
  <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -100,134 +62,18 @@ include('config.php');
   </div>
 </nav>-->
 
+<!-- UDVALGTE PRODUKTER -->
+<?php
+include ('elements/udvalgte-produkter.php')
+?>
+<!-- UDVALGTE PRODUKTER -->
 
-<div class="container main-content">
-  <div class="container">
-  <h1 class='big-h1'>Udvalgte produkter</h1>
-<div class="card-deck udvalgte-produkter">
-  <div class="card product-card">
-    <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Økologisk hvedemel</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
-      <p class='price'>29,95 kr</p>
-      <a href="#" class="fake-btn">LÆG I KURV</a>
-    </div>
-  </div>
-  <div class="card product-card">
-    <img class="card-img-top" src="images/oel2.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Økologisk rug øl</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
-      <p class='price'>39,95 kr</p>
-      <a href="#" class="fake-btn">LÆG I KURV</a>
-    </div>
-  </div>
-  <div class="card product-card">
-    <img class="card-img-top" src="images/provoiant-rapsolie-citron.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Økologisk rapsolie</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
-      <p class='price'>59,95 kr</p>
-      <a href="#" class="fake-btn">LÆG I KURV</a>
-    </div>
-  </div>
-</div>
-</div>
+<!-- NEWS SECTION -->
+<?php
+include('elements/news-section.php')
+?>
+<!-- NEWS SECTION END -->
 
-<div class="container news-section">
-<h1 class='big-h1'>Nyheder fra gården</h1>
-  <div class="card-deck">
-<div class="card mb-3 news">
-  <div class="row no-gutters">
-    <div class="col-md-6">
-      <!--<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>-->
-      <img class="bd-placeholder-img news-img"  src="images/rod-frugt.jpg" alt="">
-
-    </div>
-    <div class="col-md-6">
-      <div class="card-body card-body-news">
-        <h5 class="card-title card-title-news"><b>ROER</b> i butikken</h5>
-        <div class="card-text-news-container">
-        <p class="card-text card-text-news">Årets høst er lige kommet i hus og der er overflod af skønne rod-frugter i butikken</p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
- 
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-<div class="card mb-3 news">
-  <div class="row no-gutters">
-    <div class="col-md-6">
-      <!--<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>-->
-      <img class="bd-placeholder-img news-img"  src="images/rod-frugt.jpg" alt="">
-
-    </div>
-    <div class="col-md-6">
-      <div class="card-body card-body-news">
-        <h5 class="card-title card-title-news"><b>ROER</b> i butikken</h5>
-        <div class="card-text-news-container">
-        <p class="card-text card-text-news">Årets høst er lige kommet i hus og der er overflod af skønne rod-frugter i butikken</p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
- 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="card-deck">
-<div class="card mb-3 news" >
-  <div class="row no-gutters">
-    <div class="col-md-6">
-      <!--<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>-->
-      <img class="bd-placeholder-img news-img"  src="images/rod-frugt.jpg" alt="">
-
-    </div>
-    <div class="col-md-6">
-      <div class="card-body card-body-news">
-        <h5 class="card-title card-title-news"><b>ROER</b> i butikken</h5>
-        <div class="card-text-news-container">
-        <p class="card-text card-text-news">Årets høst er lige kommet i hus og der er overflod af skønne rod-frugter i butikken</p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
- 
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-<div class="card mb-3 news" >
-  <div class="row no-gutters">
-    <div class="col-md-6">
-      <!--<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>-->
-      <img class="bd-placeholder-img news-img"  src="images/rod-frugt.jpg" alt="">
-
-    </div>
-    <div class="col-md-6">
-      <div class="card-body card-body-news">
-        <h5 class="card-title card-title-news"><b>ROER</b> i butikken</h5>
-        <div class="card-text-news-container">
-        <p class="card-text card-text-news">Årets høst er lige kommet i hus og der er overflod af skønne rod-frugter i butikken</p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
- 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-
-
-  </div>
 
 <?php
 

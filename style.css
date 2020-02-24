@@ -3,6 +3,14 @@ body {
   font-weight: 300;
 }
 
+/* HEADER START */
+
+header{
+  margin-top: 20px;
+}
+
+/* HEADER END */
+
 /* MAIN CONTENT */
 
 .main-content {
