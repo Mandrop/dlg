@@ -1,7 +1,7 @@
 <!-- NEWS SECTION -->
 
 <div class="container news-section">
-<h1 class='big-h1'>Nyheder fra gården</h1>
+<h1 class='big-h1 mb-5'>Nyheder fra gården</h1>
   <div class="card-deck">
 <div class="card mb-3 news">
   <div class="row no-gutters">
