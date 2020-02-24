@@ -15,7 +15,7 @@
     </div>
     <div class="col">
       <span class='fake-heading'><p>Åbningstider</p></span>
-      <p>Mandag - Torsdag   09:00 - 17:30</p>
+      <p> Mandag - Torsdag   09:00 - 17:30</p>
       <p>Fredag   09:00 - 18:00</p>
       <p>Lørdag - Søndag  10:00 - 13:00</p>
     </div>

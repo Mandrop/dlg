@@ -3,13 +3,80 @@ body {
   font-weight: 300;
 }
 
+/* HENRIK LAST CHANGE */
+/* CSS - MAIN */
+/* FONT FAMILY TEMPLATES
+font-family: 'Oswald', sans-serif;
+font-family: 'Amatic SC', cursive;
+*/
+* {
+ /* FONT */
+  font-family: "Oswald", sans-serif;
+  /* FONT */
+}
+
+h1,h2,h3,h4 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+}
+
+.red-header{
+    color: #e30613;
+}
+
+.green{
+  color: #374a00;
+}
+
+
 /* HEADER START */
 
 header{
   margin-top: 20px;
 }
 
+/* NAV BAR */
+.bg-oko-green {
+  background-color: #374a00;
+}
+.navbar {
+  padding: 0 1rem;
+}
+.navbar-nav {
+  width: 100%;
+}
+.navbar a {
+  color: white;
+}
+.header-img {
+  background: white url("images/shop.jpg") no-repeat center center / cover;
+  background-position: 0 -500px;
+  height: 180px;
+  position: relative;
+}
+.header-logo-container {
+  top: -20px;
+}
+
+.header-logo-container p {
+  color: #374a00;
+  font-family: "Amatic SC", cursive;
+}
+.header-logo {
+  background-color: white;
+  height: 50px;
+}
+
+.navbar-kurv-logo {
+  height: 20px;
+  margin-left: 10px;
+}
+.nav-bar-last-item {
+  margin-left: auto;
+}
+/* NAV BAR */
 /* HEADER END */
+
 
 /* MAIN CONTENT */
 
@@ -34,7 +101,7 @@ header{
 .card-img-top {
   object-fit: contain;
   width: 100%;
-  height: 300px;
+  height: 200px;
   padding: 20px;
 }
 .card-title {
@@ -68,6 +135,7 @@ header{
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
+/* MAIN CONTENT */
 
 
 /* PRODUKT SIDE */
@@ -82,6 +150,31 @@ header{
 }
 
 /* PRODUKT SIDE */
+
+
+/* OM OS SIDE */
+
+.om-os-container{
+    background-color: white;
+}
+
+.om-os-img{
+  width: 40%;
+  height: 600px;
+  object-fit: cover;
+
+}
+
+ /* // Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+
+.om-os-img{
+        width: 100%;
+} 
+}
+
+/* OM OS SIDE */
+
 /* NEWS */
 .news-section {
   margin: 100px auto 50px auto;
@@ -114,6 +207,8 @@ header{
 .card-text-news {
   font-size: 1.1rem;
 }
+/* NEWS */
+
 
 /* FOOTER */
 footer {
@@ -179,3 +274,4 @@ footer form textarea {
   font-weight: 500;
   font-family: "Oswald", sans-serif;
 }
+
