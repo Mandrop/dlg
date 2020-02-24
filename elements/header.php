@@ -1,4 +1,7 @@
-
+<?php
+include('functions.php');
+include('config.php');
+?>
 <!-- HEADER START -->
   <header>
     <!-- BOOTSTRAP NAVBAR -->
@@ -15,6 +18,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav d-flex ">
+    <!--
       <li class="nav-item active">
         <a class="nav-link" href="index.php">FORSIDE <span class="sr-only">(current)</span></a>
       </li>
@@ -25,8 +29,12 @@
         <a class="nav-link" href="om-os.php">OM OS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">KONTAKT</a>
+        <a class="nav-link" href="kontakt.php">KONTAKT</a>
       </li>
+      -->
+      <?php
+        userPage($db);
+      ?>
       <li class="nav-item nav-bar-last-item">
         <!-- KURV -->
           <a class="nav-link d-flex align-items-center" href="#">KURV <img class="navbar-kurv-logo" src="images/shopping-basket-solid.svg" alt="Indkøbskurv"></a>
