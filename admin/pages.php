@@ -1,4 +1,22 @@
 <?php
+function read_page($db){
+echo "READ PAGE<br>";
+
+$slug = $_GET['slug'];
+
+$sql = "SELECT * FROM pages WHERE page_slug = '$slug'";
+$sqlQuery = $db->query($sql);
+
+if($sqlQuery){
+    $dbFetch = $sqlQuery->fetch_object();
+}
+
+echo "$dbFetch->page_title<br>";
+echo "$dbFetch->page_content<br>";
+
+}
+
+
 function create_page($db){
 
     if(isset($_POST['formSubmit'])){
@@ -291,6 +309,24 @@ function navigation($db){
 
 }
 
+function forside($db){
+        echo "DER ER HUL IGENNEM";
+    include ('elements/udvalgte-produkter.php');
+        include ('elements/news-section.php');
+}
+
+function produkter($db){
+    echo "DER ER HUL IGENNEM";
+    include ('elements/produkt-section.php');
+}
+
+function om_os($db){
+    include ('elements/om-os.php');
+}
+
+function kontakt($db){
+    include ('elements/kontakt.php');
+}
 
 
 

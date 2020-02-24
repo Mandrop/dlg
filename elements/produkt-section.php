@@ -1,5 +1,19 @@
 <!-- PRODUKT SIDE -->
 
+<?php
+
+    $id = $_GET['id'];
+    $page = $_GET['page'];
+
+    // HENT DATA
+    $sql = "SELECT * FROM products";
+    $sqlQuery = $db->query($sql);
+
+    if($sqlQuery){
+        $dbFetch = $sqlQuery->fetch_object();
+    }
+
+?>
 
 <div class="container main-content">
   <div class="container produkter">
@@ -8,7 +22,7 @@
   <div class="card">
     <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Økologisk hvedemel</h5>
+      <h5 class="card-title"><?php echo "$dbFetch->product_title"; ?>Økologisk hvedemel</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer... <a href="" class="read-more">Læs mere</a></p>
       <p class='price'>29,95 kr</p>
       <a href="#" class="fake-btn">LÆG I KURV</a>

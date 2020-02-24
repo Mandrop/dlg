@@ -1,4 +1,5 @@
 <?php
+include('admin/pages.php');
 include('config.php');
 ?>
 
@@ -62,9 +63,22 @@ include ('elements/header.php');
   </div>
 </nav>-->
 
+<!-- HENRIK WORKSPACE -->
+
+   <?php
+    $page = $_GET['page'];
+
+    if(function_exists($page)){
+        call_user_func($page,$db);
+    }
+   ?>
+
+<!-- HENRIK WORKSPACE -->
+
+
 <!-- UDVALGTE PRODUKTER -->
 <?php
-include('elements/udvalgte-produkter.php')
+//include('elements/udvalgte-produkter.php')
 ?>
 <!-- UDVALGTE PRODUKTER -->
 
@@ -72,7 +86,7 @@ include('elements/udvalgte-produkter.php')
 
 <!-- NEWS SECTION -->
 <?php
-include('elements/news-section.php')
+//include('elements/news-section.php')
 ?>
 <!-- NEWS SECTION END -->
 
