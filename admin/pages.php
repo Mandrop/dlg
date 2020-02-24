@@ -218,42 +218,62 @@ function delete_page($db){
 }   
 
 function list_pages($db){
+    ///////////////////////////////////////
     $sql = "SELECT * FROM pages";
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
+        echo "<div class='text-center'><h1>Side oversigt</h1></div>";
         echo "
-        
         <table class='table table-striped'>
         <thead>
         <tr>
-            <th scope='col'>#id</th>
-            <th scope='col'>Title</th>
+            <th scope='col'>ID</th>
+            <th scope='col'>Titel</th>
+            <th scope='col'>Indhold</th>
             <th scope='col'>Slug</th>
-            <th scope='col'>Update</th>
-            <th scope='col'>Delete</th>
+            <th scope='col'>Updater</th>
+            <th scope='col'>Slet</th>
         </tr>
         </thead>
         <tbody>
         ";
+    }else{
+        echo "Error, couldn't run query!";
+    }
 
-        while($dbFetch = $sqlQuery->fetch_object()){
-            echo "
+    while($dbFetch = $sqlQuery->fetch_object()){
+        echo "
             <tr>
                 <td>$dbFetch->page_id</td>
                 <td>$dbFetch->page_title</td>
+                <td>$dbFetch->page_content</td>
                 <td>$dbFetch->page_slug</td>
-                <td><a href='?page=update_page&id=$dbFetch->page_id'>Update page</a></td>
-                <td><a href='?page=delete_page&id=$dbFetch->page_id'>Delete page</a></td>
+                <td><a href='?page=update_page&id=$dbFetch->page_id'>Update</a></td>
+                <td><a class='text-danger' href='?page=delete_page&id=$dbFetch->page_id'>Delete</a></td>
             </tr>
             ";
-        }   
-        echo "
+    }
+
+    echo "
+        <tr class='bg-light'>
+            <td><a class='text-success' href='?page=create_page'>Tilføj side</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>   
+        </tr>
+
         </tbody>
         </table>
         ";
-         
-    }
+
+
+
+
+
+    ////////////////////////////////////
 }
 function navigation($db){
     $sql = "SELECT * FROM admin_pages";
