@@ -64,16 +64,17 @@ include ('elements/header.php');
 
 <!-- UDVALGTE PRODUKTER -->
 <?php
-include ('elements/udvalgte-produkter.php')
+include('elements/udvalgte-produkter.php')
 ?>
 <!-- UDVALGTE PRODUKTER -->
+
+
 
 <!-- NEWS SECTION -->
 <?php
 include('elements/news-section.php')
 ?>
 <!-- NEWS SECTION END -->
-
 
 <?php
 
