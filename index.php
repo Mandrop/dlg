@@ -91,7 +91,6 @@ include ('elements/header.php');
 <!-- NEWS SECTION END -->
 
 <?php
-
     // HENT DATA FRA PAGE TABEL
     $slug = $_GET['page'];
 
@@ -101,21 +100,15 @@ include ('elements/header.php');
 
     if($sqlQuery){
         $dbFetch = $sqlQuery->fetch_object();
+        echo "<h1>$dbFetch->page_title</h1>";
+        echo "<p>$dbFetch->page_content</p>";
+
+        if($dbFetch->page_image){
+          echo "<img src='admin/uploads/$dbFetch->page_image'></img>";
+        }
     }else{
         echo "Couldn't fetch Object";
     }
-    // EXIT
-
-    // UDSKRIV DATA TIL SIDEN
-    echo "<h1>$dbFetch->page_title</h1>";
-    echo "<p>$dbFetch->page_content</p>";
-
-    if($dbFetch->page_image){
-        echo "<img src='admin/uploads/$dbFetch->page_image'></img>";
-    }
-
-    
-
 ?> 
 
 
