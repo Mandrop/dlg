@@ -137,7 +137,7 @@ include('config.php');
 
 <div class="container news-section">
 <h1 class='big-h1'>Nyheder fra gården</h1>
-  <div class="card-deck">
+  <div class="card-deck news-deck">
 <div class="card mb-3 news">
   <div class="row no-gutters">
     <div class="col-md-6">
@@ -178,7 +178,7 @@ include('config.php');
   </div>
 </div>
 </div>
-<div class="card-deck">
+<div class="card-deck news-deck">
 <div class="card mb-3 news" >
   <div class="row no-gutters">
     <div class="col-md-6">
