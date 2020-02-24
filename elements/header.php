@@ -3,7 +3,7 @@
   <header>
     <!-- BOOTSTRAP NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-oko-green">
-  <a class="navbar-brand header-logo-container position-relative" href="#">
+  <a class="navbar-brand header-logo-container position-relative" href="index.php">
   <div class="container header-logo d-flex justify-content-center align-items-center">
   <p class="h1">Den lille Gårdbutik</p>
   </div>
@@ -16,13 +16,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav d-flex ">
       <li class="nav-item active">
-        <a class="nav-link" href="#">FORSIDE <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">FORSIDE <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">PRODUKTER</a>
+        <a class="nav-link" href="produktside.php">PRODUKTER</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">OM OS</a>
+        <a class="nav-link" href="om-os.php">OM OS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">KONTAKT</a>
