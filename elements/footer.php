@@ -24,13 +24,39 @@
 
 <hr class='hr-white'>
 
+<?php
+sendMessage($db)
+?>
 <form method='post'>
-
   <p class='big-paragraph'>Send os en besked</p>
-  <input class='d-block' type="text" placeholder='Navn' name='formName'></input>
-  <input class='d-block' type='email' placeholder='Email' name='formEmail'></input>
-  <textarea class='d-block' name="formText" placeholder='Besked' id="" cols="30" rows="10"></textarea>
-  <input class='d-block submit' type="submit" value='Send'>
+  <input class='d-block' type="text" placeholder='Navn' value='<?php echo $_SESSION['form_name'];  ?>' name='formName'></input>
+  <?php
+    if(isset($_POST['formMessageSubmit'])){
+      if(empty($_POST['formName'])){
+        echo "<p class='formError'>Venligst indtast dit navn</p>";
+    }
+    }
+    
+  ?>
+  <input class='d-block' type='email' placeholder='Email' value='<?php echo $_SESSION['form_email'];  ?>' name='formEmail'></input>
+  <?php
+    if(isset($_POST['formMessageSubmit'])){
+      if(empty($_POST['formEmail'])){
+        echo "<p class='formError'>Venligst indtast din email</p>";
+    }
+    }
+    
+  ?>
+  <textarea class='d-block' name="formContent" placeholder='Besked' id="" cols="30" rows="10"><?php echo $_SESSION['form_content'];  ?></textarea>
+  <?php
+    if(isset($_POST['formMessageSubmit'])){
+      if(empty($_POST['formContent'])){
+        echo "<p class='formError'>Venligst skriv en besked</p>";
+    }
+    }
+    
+  ?>
+  <input class='d-block submit' type="submit" value='Send' name='formMessageSubmit'>
 </form>
     </footer>
  <!-- FOOTER END -->

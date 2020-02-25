@@ -4,6 +4,7 @@ include('config.php');
 include('pages.php');
 include('users.php');
 include('login.php');
+include('messages.php');
 /*
 $sessionName = $_SESSION['admin'];
 

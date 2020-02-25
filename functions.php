@@ -34,4 +34,89 @@ function indexRedirect(){
         header('Location: ' . $urlNew);
     }
 }
+
+// MESSAGE SYSTEM
+function sendMessage($db){
+    date_default_timezone_set("Europe/Copenhagen");
+
+    echo date("d.m.y");
+    echo  date("H:i");
+
+    
+    
+    
+
+    if(isset($_SESSION['form_name']) || $_SESSION['form_name'] == ''){
+        $_SESSION['form_name'] = '';
+    }
+    if(isset($_SESSION['form_email']) || $_SESSION['form_email'] == ''){
+        $_SESSION['form_email'] = '';
+    }
+    if(isset($_SESSION['form_content']) || $_SESSION['form_content'] == ''){
+        $_SESSION['form_content'] = '';
+    }
+
+    if(isset($_POST['formMessageSubmit'])){
+
+        $formName = $_POST['formName'];
+        $formEmail = $_POST['formEmail'];
+        $formContent = $_POST['formContent'];
+
+        if (isset($_SESSION['form_name'])){
+        }else{
+            $_SESSION["form_name"] = '';
+        }
+        if (isset($_SESSION['form_email'])){
+        }else{
+            $_SESSION["form_email"] = '';
+        }
+        if (isset($_SESSION['form_content'])){
+        }else{
+            $_SESSION["form_content"] = '';
+        }
+
+   
+        $_SESSION["form_name"] = $formName; 
+        $_SESSION["form_email"] = $formEmail; 
+        $_SESSION["form_content"] = $formContent; 
+
+        if(!empty($_POST['formName']) && !empty($_POST['formEmail']) && !empty($_POST['formContent'])){
+
+            $time = date("H:i");
+            $date = date("d.m.y");
+            
+
+
+            $sql = "INSERT INTO messages SET
+                message_name = '$formName',
+                message_email = '$formEmail',
+                message_content = '$formContent',
+                message_time = '$time',
+                message_date = '$date';
+                ";
+            
+            if($db->query($sql)){
+                echo "Message sent!";
+            }else{
+                echo "Sorry, couldn't send message";
+            }
+
+
+            
+
+        }
+        
+
+
+
+
+
+        /*$sql = "INSERT INTO pages SET
+                page_title = '$varTitle',
+                page_content = '$varContent',
+                page_slug = '$varSlug',
+                page_image = '$fileName'
+                ";*/
+    }
+}
 ?>
