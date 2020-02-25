@@ -27,12 +27,30 @@
   <?php
 //UDSKRIV PRODUKTERNE TIL SIDEN
      while($dbFetch = $sqlQuery->fetch_object()){
+
+      //TEXT FORKORTER
+              // strip tags to avoid breaking any html
+            $string = strip_tags($dbFetch->product_content);
+            if (strlen($string) > 80) {
+
+            // truncate string
+            $stringCut = substr($string, 0, 80);
+            $endPoint = strrpos($stringCut, ' ');
+
+            //if the string doesn't contain any space then it will cut without word basis.
+            $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+            $string .= '... <a class="read-more" href="/this/story">Læs Mere</a>';
+
+      //TEXT FORKORTER SLUT
+}
+
+
         echo "
   <div class='card'>
     <img class='card-img-top' src='$dbFetch->product_image' alt='Card image cap'>
     <div class='card-body'>
       <h5 class='card-title'> $dbFetch->product_title </h5>
-      <p class='card-text'>$dbFetch->product_content ... <a href='' class='read-more'>Læs mere</a></p>
+      <p class='card-text'>$string</a></p>
       <p class='price'>$dbFetch->product_price kr.</p>
       <a href='' class='fake-btn'>LÆG I KURV</a>
     </div>

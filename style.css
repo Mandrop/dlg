@@ -209,6 +209,10 @@ header {
 
 /* PRODUCT INFO */
 
+.product-info .card {
+  border: none;
+}
+
 .product-info .section {
   margin: 100px auto 50px auto;
   width: 90%;
@@ -218,8 +222,8 @@ header {
 }
 .product-info .news-img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 400px;
+  object-fit: contain;
   border-radius: 5px;
 }
 .product-info .news {
