@@ -10,29 +10,31 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Amatic SC', cursive;
 */
 * {
- /* FONT */
+  /* FONT */
   font-family: "Oswald", sans-serif;
   /* FONT */
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
   color: #374A00;
 }
 
-.red-header{
-    color: #e30613;
+.red-header {
+  color: #e30613;
 }
 
-.green{
+.green {
   color: #374a00;
 }
 
-
 /* HEADER START */
 
-header{
+header {
   margin-top: 20px;
 }
 
@@ -77,7 +79,6 @@ header{
 }
 /* NAV BAR */
 /* HEADER END */
-
 
 /* MAIN CONTENT */
 
@@ -139,42 +140,36 @@ header{
 }
 /* MAIN CONTENT */
 
-
 /* PRODUKT SIDE */
 
 .produkter .card {
   width: 25%;
 }
 
-.produkter .card-deck .card{
+.produkter .card-deck .card {
   flex-basis: auto;
   margin-bottom: 15px;
 }
 
 /* PRODUKT SIDE */
 
-
-
-
 /* OM OS SIDE */
 
-.om-os-container{
-    background-color: white;
+.om-os-container {
+  background-color: white;
 }
 
-.om-os-img{
+.om-os-img {
   width: 40%;
   height: 600px;
   object-fit: cover;
-
 }
 
- /* // Medium devices (tablets, 768px and down) */
+/* // Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-
-.om-os-img{
-        width: 100%;
-} 
+  .om-os-img {
+    width: 100%;
+  }
 }
 
 /* OM OS SIDE */
@@ -215,7 +210,7 @@ header{
 
 /* PRODUCT INFO */
 
-.product-info .card{
+.product-info .card {
   border: none;
 }
 
@@ -245,7 +240,7 @@ header{
   text-align: left;
 }
 
-.product-info .price{
+.product-info .price {
   text-align: left;
 }
 .product-info .lightgrey {
@@ -255,12 +250,11 @@ header{
   font-size: 1.1rem;
 }
 
-.product-info .fake-btn{
+.product-info .fake-btn {
   width: 150px;
 }
 
 /* PRODUCT INFO END */
-
 
 /* FOOTER */
 footer {
@@ -327,3 +321,7 @@ footer form textarea {
   font-family: "Oswald", sans-serif;
 }
 
+.formError {
+  color: wheat;
+  font-size: 0.8rem;
+}

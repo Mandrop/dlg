@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$_SESSION['previous'] = basename($_SERVER['PHP_SELF']);
 include('config.php');
 ?>
 <!-- HEADER START -->
@@ -49,7 +50,7 @@ include('config.php');
 </nav>
     <!-- BOOTSTRAP NAVBAR END -->
     <div class="header-img">
-    
+
     </div>
     </header>
 <!-- HEADER END -->
