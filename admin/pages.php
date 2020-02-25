@@ -310,13 +310,13 @@ function navigation($db){
 }
 
 function forside($db){
-        echo "DER ER HUL IGENNEM";
+       
     include ('elements/udvalgte-produkter.php');
         include ('elements/news-section.php');
 }
 
 function produkter($db){
-    echo "DER ER HUL IGENNEM";
+    
     include ('elements/product-section.php');
 }
 

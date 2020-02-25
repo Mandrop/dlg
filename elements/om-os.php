@@ -2,7 +2,7 @@
 
 <div class="jumbotron jumbotron-fluid bg-white shadow-sm">
   <div class="container d-flex flex-column align-items-center">
-    <h1 class="display-4 mb-5 red-header">om DEN LILLE GÅRDBUTIK</h1>
+    <h1 class="display-4 mb-5">om DEN LILLE GÅRDBUTIK</h1>
     <div class="container d-flex align-items-center align-items-md-start justify-content-md-center flex-column flex-md-row ">
      <p class="lead mr-4 p-4 rounded shadow-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa unde earum nemo iste, 
          labore, asperiores consequuntur quasi pariatur quam facilis quod provident?<br>

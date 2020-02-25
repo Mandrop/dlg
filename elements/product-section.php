@@ -39,18 +39,18 @@
 
             //if the string doesn't contain any space then it will cut without word basis.
             $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-            $string .= '... <a class="read-more" href="/this/story">Læs Mere</a>';
+            $string .= '... ';
 
-      //TEXT FORKORTER SLUT
+      
 }
-
+//TEXT FORKORTER SLUT
 
         echo "
   <div class='card'>
     <img class='card-img-top' src='$dbFetch->product_image' alt='Card image cap'>
     <div class='card-body'>
       <h5 class='card-title'> $dbFetch->product_title </h5>
-      <p class='card-text'>$string</a></p>
+      <p class='card-text'>$string <a class='read-more' href='?page=produkt_info&product_id=$dbFetch->product_id'>Læs Mere</a></p>
       <p class='price'>$dbFetch->product_price kr.</p>
       <a href='' class='fake-btn'>LÆG I KURV</a>
     </div>
