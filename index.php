@@ -1,6 +1,7 @@
 <?php
 include('admin/pages.php');
 include('config.php');
+include('functions.php');
 ?>
 
 <!doctype html>
@@ -22,7 +23,11 @@ include('config.php');
   </head>
 
   <body>
-  
+  <!-- CHECK IF ON INDEX -->
+  <?php
+  indexRedirect();
+
+  ?>
 <!-- HEADER START -->
 <?php
 include ('elements/header.php');
