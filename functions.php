@@ -30,7 +30,7 @@ function indexRedirect(){
     if(!$page){
         // IF NO ?PAGE IS FOUND IN URL THEN TAKE CURRENT URL AND ADD ?PAGE=INDEX.PHP AT THE END
         $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $urlNew = $url . '?page=index.php';
+        $urlNew = $url . '?page=forside';
         header('Location: ' . $urlNew);
     }
 }
