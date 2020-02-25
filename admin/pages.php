@@ -317,7 +317,7 @@ function forside($db){
 
 function produkter($db){
     echo "DER ER HUL IGENNEM";
-    include ('elements/produkt-section.php');
+    include ('elements/product-section.php');
 }
 
 function om_os($db){
