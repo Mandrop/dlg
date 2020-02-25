@@ -34,6 +34,9 @@ include ('elements/header.php');
 ?>
 <!-- HEADER END -->
 
+<!-- MAIN CONTENT  -->
+<main class="container main-content">
+
 
   <!-- Bootstrap Navbar -->
  <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -116,8 +119,8 @@ include ('elements/header.php');
     }
 ?> 
 
-
-    <div class="container"></div>
+<!-- MAIN END -->
+</main>
     <!-- FOOTER START -->
     <?php
   include('elements/footer.php')

@@ -1,6 +1,6 @@
 <!-- UDVALGTE PRODUKTER -->
 
-<div class="container main-content">
+
   <div class="container">
   <h1 class='big-h1'>Udvalgte produkter</h1>
 <div class="card-deck udvalgte-produkter">
@@ -41,7 +41,7 @@
     </div>
   </div>
 </div>
-</div>
+
 
 <!-- UDVALGTE PRODUKTER -->
 

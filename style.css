@@ -153,6 +153,8 @@ header{
 /* PRODUKT SIDE */
 
 
+
+
 /* OM OS SIDE */
 
 .om-os-container{
@@ -209,6 +211,51 @@ header{
   font-size: 1.1rem;
 }
 /* NEWS */
+
+/* PRODUCT INFO */
+
+
+.product-info .section {
+  margin: 100px auto 50px auto;
+  width: 90%;
+}
+.product-info .deck {
+  margin: 25px 0 25px 0;
+}
+.product-info .news-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.product-info .news {
+  background-color: #374a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.product-info .card-title {
+  color: #e30613;
+  font-weight: 100;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.product-info .price{
+  text-align: left;
+}
+.product-info .lightgrey {
+  font-weight: 100;
+}
+.product-info .card-text {
+  font-size: 1.1rem;
+}
+
+.product-info .fake-btn{
+  width: 150px;
+}
+
+/* PRODUCT INFO END */
 
 
 /* FOOTER */
