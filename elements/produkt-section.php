@@ -19,7 +19,7 @@
 
 ?>
 
-<div class="container main-content">
+
   <div class="container produkter">
   <h1 class='big-h1'>PRODUKTER</h1>
 <div class="card-deck">
@@ -45,7 +45,7 @@
 </div>
 
 </div>
-  </div>
+
 
 <!-- PRODUKTSIDE -->
 

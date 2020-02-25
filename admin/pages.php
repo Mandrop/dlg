@@ -328,6 +328,9 @@ function kontakt($db){
     include ('elements/kontakt.php');
 }
 
+function product_info($db){
+    include ('elements/product-info.php');
+}
 
 
 ?>
