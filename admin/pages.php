@@ -309,6 +309,15 @@ function navigation($db){
 
 }
 
+
+
+
+
+
+
+
+
+
 function forside($db){
        
     include ('elements/udvalgte-produkter.php');

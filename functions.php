@@ -101,6 +101,11 @@ function sendMessage($db){
                 echo "Sorry, couldn't send message";
             }
 
+        $_SESSION["form_name"] = ''; 
+        $_SESSION["form_email"] = ''; 
+        $_SESSION["form_content"] = '';
+
+
 
             
 
