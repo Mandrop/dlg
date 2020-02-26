@@ -46,13 +46,13 @@ if($dbFetch = $sqlQuery->fetch_object()){
     </div>
     <div class="col">
       <span class='fake-heading'><p>Åbningstider</p></span>
-      <p> Mandag - <?php echo $dbFetch->contact_monday ?></p>
-      <p> Tirsdag - <?php echo $dbFetch->contact_tuesday ?></p>
-      <p> Onsdag - <?php echo $dbFetch->contact_wednesday ?></p>
-      <p> Torsdag - <?php echo $dbFetch->contact_thursday ?></p>
-      <p> Fredag - <?php echo $dbFetch->contact_friday ?></p>
-      <p> Lørdag - <?php echo $dbFetch->contact_saturday ?></p>
-      <p> Søndag - <?php echo $dbFetch->contact_sunday ?></p>
+      <p> Mandag: &nbsp <?php echo $dbFetch->contact_monday ?></p>
+      <p> Tirsdag: &nbsp <?php echo $dbFetch->contact_tuesday ?></p>
+      <p> Onsdag: &nbsp <?php echo $dbFetch->contact_wednesday ?></p>
+      <p> Torsdag: &nbsp <?php echo $dbFetch->contact_thursday ?></p>
+      <p> Fredag: &nbsp <?php echo $dbFetch->contact_friday ?></p>
+      <p> Lørdag: &nbsp <?php echo $dbFetch->contact_saturday ?></p>
+      <p> Søndag: &nbsp <?php echo $dbFetch->contact_sunday ?></p>
     </div>
   </div>
 </div>

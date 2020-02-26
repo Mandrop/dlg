@@ -38,13 +38,7 @@ function indexRedirect(){
 // MESSAGE SYSTEM
 function sendMessage($db){
     date_default_timezone_set("Europe/Copenhagen");
-
     
-
-    
-    
-    
-
     if(isset($_SESSION['form_name']) || $_SESSION['form_name'] == ''){
         $_SESSION['form_name'] = '';
     }
