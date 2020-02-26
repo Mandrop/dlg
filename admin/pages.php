@@ -309,6 +309,15 @@ function navigation($db){
 
 }
 
+
+
+
+
+
+
+
+
+
 function forside($db){
         echo "DER ER HUL IGENNEM";
     include ('elements/udvalgte-produkter.php');
