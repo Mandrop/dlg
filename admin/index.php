@@ -5,7 +5,7 @@ include('pages.php');
 include('users.php');
 include('login.php');
 include('messages.php');
-include('contact_information.php');
+include('products.php');
 /*
 $sessionName = $_SESSION['admin'];
 
@@ -40,10 +40,10 @@ if($sqlQuery){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
     <!--<link rel="stylesheet" href="css/style.css">-->
-
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Oswald:300,400,500&display=swap" rel="stylesheet">
     
     <?php
       $admin = $_SESSION["admin"];
@@ -60,11 +60,11 @@ if($sqlQuery){
         }
         
         if($theme == 'light'){
-          echo "<link rel='stylesheet' href='style.css'>";
+          echo "<link rel='stylesheet' href='css/style.css'>";
         }else if($theme == 'dark'){
-          echo "<link rel='stylesheet' href='dark.css'>";
+          echo "<link rel='stylesheet' href='css/dark.css'>";
         }else{
-          echo "<link rel='stylesheet' href='style.css'>";
+          echo "<link rel='stylesheet' href='css/style.css'>";
         }
         /*else{
           echo "No theme selected in database";
