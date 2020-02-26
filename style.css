@@ -21,6 +21,7 @@ h3,
 h4 {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
+  color: #374A00;
 }
 
 .red-header {
@@ -233,7 +234,7 @@ header {
   border-radius: 5px;
 }
 .product-info .card-title {
-  color: #e30613;
+  color: #374a00;
   font-weight: 100;
   margin-bottom: 25px;
   text-align: left;
