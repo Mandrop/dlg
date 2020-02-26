@@ -21,17 +21,17 @@ function create_product($db){
 
     if(isset($_POST['formSubmit'])){
 
-        if(empty($_POST['formTitle'])){
-            echo "Title field is empty";
+        if(empty($_POST['formProductTitle'])){
+            echo "Produckt title er tom";
         }
-        if(empty($_POST['formContent'])){
-            echo "Content field is empty";
+        if(empty($_POST['formProductContent'])){
+            echo "Produktbeskrivelse er tomt";
         }
         if(empty($_POST['formSlug'])){
             echo "Slug field is empty";
         }
 
-        if(!empty($_POST['formTitle']) && !empty($_POST['formContent']) && !empty($_POST['formSlug'])){
+        if(!empty($_POST['formProductTitle']) && !empty($_POST['formProductContent']) && !empty($_POST['formSlug'])){
 
             $target_dir = "uploads/";
             $target_file = $target_dir . basename($_FILES["formFile"]["name"]);
@@ -51,42 +51,42 @@ function create_product($db){
             }
             // Check if file already exists
             if (file_exists($target_file)) {
-                echo "Sorry, file already exists.";
+                echo "Hov, filen eksisterer allerede.";
                 $uploadOk = 0;
             }
             // Check file size
             if ($_FILES["formFile"]["size"] > 500000) {
-                echo "Sorry, your file is too large.";
+                echo "Hov, filen er for stor.";
                 $uploadOk = 0;
             }
             // Allow certain file formats
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif" ) {
-                echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                echo "Hov, kun JPG, JPEG, PNG & GIF filer er tilladt.";
                 $uploadOk = 0;
             }
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+                echo "Hov, filen er ikke blevet uploaded.";
             // if everything is ok, try to upload file
             }
 
-            $varTitle = $_POST['formTitle'];
-            $varContent = $_POST['formContent'];
+            $varTitle = $_POST['formProductTitle'];
+            $varContent = $_POST['formProductContent'];
             $varSlug = $_POST['formSlug'];
 
-            $sql = "INSERT INTO pages SET
-                page_title = '$varTitle',
-                page_content = '$varContent',
-                page_slug = '$varSlug',
-                page_image = '$fileName'
+            $sql = "INSERT INTO products SET
+                product_title = '$varTitle',
+                product_content = '$varContent',
+                product_slug = '$varSlug',
+                product_image = '$fileName'
                 ";
 
             if($db->query($sql)){
                 if (move_uploaded_file($_FILES["formFile"]["tmp_name"], $target_file)) {
-                    echo "The file ". basename( $_FILES["formFile"]["name"]). " has been uploaded.";
+                    echo "Filen ". basename( $_FILES["formFile"]["name"]). " er blevet uploadet.";
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    echo "Hov, der er sket en fejl under upload.";
                 }
             }
         }      
@@ -94,10 +94,11 @@ function create_product($db){
 
 
     echo "
+    <h1>Tilføj produkt</h1>
     <form method='post' enctype='multipart/form-data'>
-        <input type='text' name='formTitle' placeholder='Produkt title'></input><br>
-        <textarea name='formContent' placeholder='Produkt beskrivelse'></textarea><br>
-        <input type='text' name='formPrice' placeholder='Produkt pris'></input><br>
+        <input type='text' name='formProductTitle' placeholder='Produkt title'></input><br>
+        <textarea name='formProductContent' placeholder='Produkt beskrivelse'></textarea><br>
+        <input type='text' name='formProductPrice' placeholder='Produkt pris'></input><br>
         <input type='file' name='formFile'></input><br>
         <input type='submit' name='formSubmit'>
     </form>
@@ -205,9 +206,9 @@ function update_product($db){
 
 function delete_product($db){
 
-    $id = $_GET['id'];
+    $product_id = $_GET['produkt_id'];
 
-    $sql = "SELECT * FROM pages where page_id=$id";
+    $sql = "SELECT * FROM products where produkt_id=$product_id";
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
@@ -237,7 +238,7 @@ function delete_product($db){
 
 function list_products($db){
     ///////////////////////////////////////
-    $sql = "SELECT * FROM pages";
+    $sql = "SELECT * FROM products";
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
@@ -247,11 +248,21 @@ function list_products($db){
         <thead>
         <tr>
             <th scope='col'>ID</th>
+            <th scope='col'>Billede</th>
             <th scope='col'>Titel</th>
             <th scope='col'>Indhold</th>
-            <th scope='col'>Slug</th>
-            <th scope='col'>Updater</th>
+            <th scope='col'>Pris</th>
+            <th scope='col'>Opdater</th>
             <th scope='col'>Slet</th>
+        </tr>
+        <tr class='bg-light'>
+            <td><a class='text-success' href='?page=create_product'>Tilføj produkt</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>   
         </tr>
         </thead>
         <tbody>
@@ -263,25 +274,19 @@ function list_products($db){
     while($dbFetch = $sqlQuery->fetch_object()){
         echo "
             <tr>
-                <td>$dbFetch->page_id</td>
-                <td>$dbFetch->page_title</td>
-                <td>$dbFetch->page_content</td>
-                <td>$dbFetch->page_slug</td>
-                <td><a href='?page=update_page&id=$dbFetch->page_id'>Update</a></td>
-                <td><a class='text-danger' href='?page=delete_page&id=$dbFetch->page_id'>Delete</a></td>
+                <td>$dbFetch->product_id</td>
+                <td><img class='product-list-img rounded' src='../$dbFetch->product_image'></td>
+                <td>$dbFetch->product_title</td>
+                <td>$dbFetch->product_content</td>
+                <td>$dbFetch->product_price</td>
+                <td><a href='?page=update_page&id=$dbFetch->product_id'>Opdater</a></td>
+                <td><a class='text-danger' href='?page=delete_page&id=$dbFetch->product_id'>Slet</a></td>
             </tr>
             ";
     }
 
     echo "
-        <tr class='bg-light'>
-            <td><a class='text-success' href='?page=create_product'>Tilføj produkt</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>   
-        </tr>
+
 
         </tbody>
         </table>
