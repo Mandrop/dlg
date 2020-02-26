@@ -39,8 +39,7 @@ function indexRedirect(){
 function sendMessage($db){
     date_default_timezone_set("Europe/Copenhagen");
 
-    echo date("d.m.y");
-    echo  date("H:i");
+    
 
     
     
