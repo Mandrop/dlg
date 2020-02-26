@@ -5,6 +5,7 @@ include('pages.php');
 include('users.php');
 include('login.php');
 include('messages.php');
+include('contact_information.php');
 /*
 $sessionName = $_SESSION['admin'];
 
