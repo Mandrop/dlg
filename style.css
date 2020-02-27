@@ -304,6 +304,7 @@ footer div {
 }
 footer .row {
   font-family: "Oswald", sans-serif;
+  margin: 0px;
 }
 .hr-white {
   background-color: white;
