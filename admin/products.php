@@ -164,9 +164,11 @@ function update_product($db){
            
             //TJEKKER OM DER INDSAT NOGET I formFile
            if($_FILES['formFile']['name'] == "") {
-            // No file was selected for upload, your (re)action goes here
 
-                $fileName = $tempImage;
+            // No file was selected for upload, your (re)action goes here
+            //Hvis ingen fil er valgt - indsæt det samme som i DB
+                $fileName = $dbFetch->product_image;
+                $image_dir = '';
             } else {
                 
                    //FILE UPLOAD
@@ -181,7 +183,7 @@ function update_product($db){
                     if(isset($_POST["formSubmit"])) {
                         $check = getimagesize($_FILES["formFile"]["tmp_name"]);
                         if($check !== false) {
-                            echo "File is an image - " . $check["mime"] . ".<br>";
+                            //echo "File is an image - " . $check["mime"] . ".<br>";
                             $uploadOk = 1;
                         } else {
                             echo "File is not an image.";
@@ -190,8 +192,8 @@ function update_product($db){
                     }
                     // Check if file already exists
                     if (file_exists($target_file)) {
-                        echo "Sorry, file already exists.";
-                        $uploadOk = 0;
+                        //echo "Sorry, file already exists.";
+                        //$uploadOk = 0;
                     }
                     // Check file size
                     if ($_FILES["formFile"]["size"] > 500000) {
@@ -220,18 +222,17 @@ function update_product($db){
                 product_title = '$varProductTitle',
                 product_content = '$varProductContent',
                 product_price = '$varProductPrice',
-                product_image = '$image_dir$fileName';
+                product_image = '$image_dir$fileName'
                 WHERE product_id = '$product_id';
                 ";
 
             if($db->query($sql)){
                 if (move_uploaded_file($_FILES["formFile"]["tmp_name"], $target_file)) {
-                        echo "Produktet er blevet oprettet<br>";
-                        echo "Billedet: ". basename( $_FILES["formFile"]["name"]). " er blevet uploadet.";
+                        echo "Produktet er blevet opdateret<br>";
+                        //echo "Billedet: ". basename( $_FILES["formFile"]["name"]). " er blevet uploadet.";
 
-                } elseif($fileName == $tempImage) {
-                        echo "Produktet er blevet oprettet<br>";
-                        echo "Et imidlertidigt billede er indsat";                 
+                } elseif($fileName == $dbFetch->product_image) {
+                        echo "Produktet er blevet opdateret<br>";                
                     }else{
                 echo "Sorry, there was an error uploading your file.";
                 }
@@ -242,11 +243,12 @@ function update_product($db){
     echo "
     <form method='post' enctype='multipart/form-data'>
         <input type='text' name='formProductTitle' value='$dbFetch->product_title'</input><br>
-        <textarea name='formContent'>$dbFetch->product_content</textarea><br>
+        <textarea name='formProductContent'>$dbFetch->product_content</textarea><br>
         <input type='text' name='formProductPrice' value='$dbFetch->product_price'</input><br>
         <input type='file' name='formFile'></input><br>
-        <input type='submit' name='formSubmit'>
+        <input type='submit' name='formSubmit' value='OPDATER'>
     </form>
+  <img class='product-list-img rounded' src='../$dbFetch->product_image'>
     ";
 }
 
@@ -255,32 +257,33 @@ function delete_product($db){
 
     $product_id = $_GET['produkt_id'];
 
-    $sql = "SELECT * FROM products where produkt_id=$product_id";
+    $sql = "SELECT * FROM products where product_id=$product_id";
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
         $dbFetch = $sqlQuery->fetch_object();
     }
     
-    $target_dir = "uploads/";
+    $target_dir = "../images/";
 
     if(isset($_POST['formSubmit'])){
 
-        $sql = "DELETE FROM pages Where page_id=$id";
+        $sql = "DELETE FROM products Where product_id=$product_id";
         $sqlQuery = $db->query($sql);
 
         if($sqlQuery){
-            unlink($target_dir . $dbFetch->page_image);
-            echo "Page deleted!";
+            unlink($target_dir . $dbFetch->product_image);
+            echo "Produktet er slettet!";
         }
-    }
+    }else{
 
     echo "
-    <h1>Are your sure you want to delete page: " . $dbFetch->page_title . " ?</h1>
+    <h1>Er du sikker på, at du vil slette: " . $dbFetch->product_title . " ?</h1>
     <form method='post'>
-        <input type='submit' name='formSubmit'>
+        <input type='submit' name='formSubmit' value='SLET'>
     </form>
     ";
+    }
 }   
 
 function list_products($db){
@@ -326,8 +329,8 @@ function list_products($db){
                 <td>$dbFetch->product_title</td>
                 <td>$dbFetch->product_content</td>
                 <td>$dbFetch->product_price</td>
-                <td><a href='?page=update_product&id=$dbFetch->product_id'>Opdater</a></td>
-                <td><a class='text-danger' href='?page=delete_product&id=$dbFetch->product_id'>Slet</a></td>
+                <td><a href='?page=update_product&produkt_id=$dbFetch->product_id'>Opdater</a></td>
+                <td><a class='text-danger' href='?page=delete_product&produkt_id=$dbFetch->product_id'>Slet</a></td>
             </tr>
             ";
     }
