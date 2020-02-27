@@ -150,9 +150,12 @@ include ('elements/header.php');
 <!-- IMAGE GALLERY BOTTOM -->
 <div class="container-fluid p-0 mb-5 d-flex image-gallery-bottom">
 
-    <img src="images/citrus-frugter.jpg" alt="">
-    <img src="images/ko.jpg" alt="">
-
+    <div class="w-50">
+    <img src="images/citrus-frugter.jpg" alt='Citrus frugter'>
+    </div>
+<div class="w-50">
+    <img src="images/ko.jpg" alt='Køer på mark'>
+</div>
 </div>
 
 <!-- IMAGE GALLERY BOTTOM -->
