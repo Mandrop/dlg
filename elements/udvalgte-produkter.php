@@ -4,7 +4,7 @@
   <div class="container">
   <h1 class='big-h1'>Udvalgte produkter</h1>
 <div class="card-deck udvalgte-produkter">
-  <div class="card product-card">
+  <div class="card product-card shadow-sm">
     <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk hvedemel</h5>
@@ -16,7 +16,7 @@
       </div>
     </div>
   </div>
-  <div class="card product-card">
+  <div class="card product-card shadow-sm">
     <img class="card-img-top" src="images/oel2.png" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk rug øl</h5>
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="card product-card">
+  <div class="card product-card shadow-sm">
     <img class="card-img-top" src="images/provoiant-rapsolie-citron.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Økologisk rapsolie</h5>

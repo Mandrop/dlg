@@ -5,18 +5,21 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Amatic SC', cursive;
 */
 * {
- /* FONT */
+  /* FONT */
   font-family: "Oswald", sans-serif;
   /* FONT */
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
 }
 
-.red-header{
-    color: #e30613;
+.red-header {
+  color: #e30613;
 }
 
 /* NAV BAR */
@@ -60,26 +63,23 @@ h1,h2,h3,h4 {
 }
 /* NAV BAR */
 
-
 /* OM OS SIDE */
 
-.om-os-container{
-    background-color: white;
+.om-os-container {
+  background-color: white;
 }
 
-.om-os-img{
+.om-os-img {
   width: 40%;
   height: 600px;
   object-fit: cover;
-
 }
 
- /* // Medium devices (tablets, 768px and down) */
+/* // Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-
-.om-os-img{
-        width: 100%;
-} 
-
+  .om-os-img {
+    width: 100%;
+  }
+}
 
 /* OM OS SIDE */

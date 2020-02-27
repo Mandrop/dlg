@@ -1,6 +1,6 @@
   <!-- FOOTER START -->
     <footer>
-      <div class="container contact-info">
+      <!--<div class="container contact-info">
   <div class="row">
     <div class="col">
       <span class='fake-heading'><p>Adresse</p></span>
@@ -20,8 +20,43 @@
       <p>Lørdag - Søndag  10:00 - 13:00</p>
     </div>
   </div>
-</div>
+</div>-->
 
+
+<!-- INFORMATION FRA DATABASEN -->
+<?php
+$sql = "SELECT * FROM contact";
+$sqlQuery = $db->query($sql);
+if($dbFetch = $sqlQuery->fetch_object()){
+}
+
+?>
+<div class="container contact-info">
+  <div class="row">
+    <div class="col">
+      <span class='fake-heading'><p>Adresse</p></span>
+      <p><?php echo $dbFetch->contact_shop_name ?></p>
+      <p><?php echo $dbFetch->contact_street ?></p>
+      <p><?php echo $dbFetch->contact_city_and_zip ?></p>
+    </div>
+    <div class="col-6">
+      <span class='fake-heading'><p>Kontakt</p></span>
+      <p>+45 <?php echo $dbFetch->contact_phone ?></p>
+      <p><?php echo $dbFetch->contact_email ?></p>
+    </div>
+    <div class="col">
+      <span class='fake-heading'><p>Åbningstider</p></span>
+      <p> Mandag: &nbsp <?php echo $dbFetch->contact_monday ?></p>
+      <p> Tirsdag: &nbsp <?php echo $dbFetch->contact_tuesday ?></p>
+      <p> Onsdag: &nbsp <?php echo $dbFetch->contact_wednesday ?></p>
+      <p> Torsdag: &nbsp <?php echo $dbFetch->contact_thursday ?></p>
+      <p> Fredag: &nbsp <?php echo $dbFetch->contact_friday ?></p>
+      <p> Lørdag: &nbsp <?php echo $dbFetch->contact_saturday ?></p>
+      <p> Søndag: &nbsp <?php echo $dbFetch->contact_sunday ?></p>
+    </div>
+  </div>
+</div>
+<!-- INFORMATION FRA DATABASEN SLUT-->
 <hr class='hr-white'>
 
 <?php
