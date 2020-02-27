@@ -5,11 +5,10 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Amatic SC', cursive;
 */
 * {
- /* FONT */
+  /* FONT */
   font-family: "Oswald", sans-serif;
   /* FONT */
 }
-
 
 /* text-transform: capitalize; */
 .form-signin {
@@ -32,7 +31,7 @@ user agent stylesheet form {
 }
 body {
   margin: 0;
-/*   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  /*   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
   font-size: 1rem;
@@ -41,6 +40,17 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+}
+#admin-name {
+  background: #329d9c;
+  border: #329d9c;
+  color: #ffffff;
+}
+
+#admin-name .login-submit:hover,
+#admin-name .login-submit:active,
+#admin-name .login-submit:focus {
+  background: #329d9c;
 }
 :root {
   --blue: #007bff;
@@ -90,9 +100,8 @@ user agent stylesheet html {
   box-sizing: border-box;
 }
 
-
 /* PRODUCT LIST ADMIN PAGE */
-.product-list-img{
+.product-list-img {
   width: auto;
   height: 100px;
 }

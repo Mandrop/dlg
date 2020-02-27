@@ -84,7 +84,8 @@ function contact_information($db){
         <input type='email' name='formContactEmail' class='form-control' id='colFormLabel' placeholder='Email' value='$dbFetch->contact_email'>
       </div>
     </div>
-
+    <br>
+    <h2 class='text-center'>Åbningstider</h2>
     <div class='form-group row'>
       <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
       <div class='col-sm-6'>

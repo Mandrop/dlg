@@ -139,7 +139,7 @@ if($sqlQuery){
     <?php 
     if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
       echo "
-      <a href='?page=logout' class='nav-link ml-auto' id='white'>Log out</a>
+      <a href='?page=logout' class='nav-link ml-auto' id='white'>Log ud</a>
       ";
       /*
       echo "<div class='dropdown'";
@@ -154,7 +154,7 @@ if($sqlQuery){
       echo "</div>";
       */
       echo "<div class='dropdown' id='test'>
-      <a class='btn btn-secondary dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>". 
+      <a class='btn btn-secondary dropdown-toggle' id='admin-name' href='#' role='button' id='dropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>". 
         $_SESSION['admin'] .
       " </a>";
 
@@ -225,12 +225,12 @@ if($sqlQuery){
         <a class='dropdown-item' href='#'>
         
         <form method='post'>
-        <input type='submit' name='themeSubmit' value='change theme'/>
+        <input type='submit' name='themeSubmit' value='Skift tema'/>
       </form>
         
         
         </a>
-        <a class='dropdown-item' href='#'>Something else here</a>
+        <!--<a class='dropdown-item' href='#'>Something else here</a>-->
       </div>
     </div>";
     }
@@ -296,7 +296,8 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
       call_user_func($page, $db);
     }
   }else{
-    echo "<h1 class='text-center'>Front page</h1>";
+    echo "<h1 class='text-center'>Værktøjer</h1>";
+
   }
 }else{
   login($db);
