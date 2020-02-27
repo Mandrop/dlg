@@ -34,7 +34,7 @@ include ('elements/header.php');
 <!-- HEADER END -->
 
 <!-- MAIN CONTENT  -->
-<main class="container-fluid main-content shadow">
+<main class="container main-content shadow">
 
 
   <!-- Bootstrap Navbar -->
