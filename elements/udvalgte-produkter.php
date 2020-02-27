@@ -56,6 +56,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
 
 
   ?>
+  <a href="test.dk">
   <div class="card product-card shadow-sm">
     <img class="card-img-top" src="<?php /*images/mel2.jpg*/ echo $image ?>" alt="Card image cap">
     <div class="card-body">
@@ -76,6 +77,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
       </div>
     </div>
   </div>
+  </a>
   <?php
 
 $sql = "SELECT product_title, product_price, product_image FROM products WHERE product_id='$randId[1]'";
