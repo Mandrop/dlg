@@ -26,7 +26,6 @@ include('functions.php');
   <!-- CHECK IF ON INDEX -->
   <?php
   indexRedirect();
-
   ?>
 <!-- HEADER START -->
 <?php
@@ -35,7 +34,7 @@ include ('elements/header.php');
 <!-- HEADER END -->
 
 <!-- MAIN CONTENT  -->
-<main class="container main-content">
+<main class="container main-content shadow">
 
 
   <!-- Bootstrap Navbar -->
@@ -105,18 +104,44 @@ include ('elements/header.php');
     $sql = "SELECT * FROM pages WHERE page_slug='$slug'";
     $sqlQuery = $db->query($sql);
 
+    if(mysqli_num_rows($sqlQuery) > 0){
+    //if($sqlQuery){
+      $dbFetch = $sqlQuery->fetch_object();
 
-    if($sqlQuery){
-        $dbFetch = $sqlQuery->fetch_object();
-        echo "<h1>$dbFetch->page_title</h1>";
-        echo "<p>$dbFetch->page_content</p>";
+      echo "
+        <h1 class='big-h1'>$dbFetch->page_title</h1>
+      <div class='jumbotron jumbotron-fluid bg-white'>
+        <div class='container d-flex flex-column align-items-center'>
+          
+          <div class='container d-flex align-items-center align-items-md-start justify-content-md-center flex-column flex-md-row '>
+           <p class='lead mr-4 p-4 rounded shadow-sm'>$dbFetch->page_content</p>
+           ";
+           if($dbFetch->page_image){
+           echo "
+           <img class='img-fluid om-os-img rounded' src='admin/uploads/$dbFetch->page_image' alt='Den lille gårdbutik'></img>
+           ";
+           }
+           echo "
+          </div>
+      
+        </div>
+      </div>
+      ";
 
-        if($dbFetch->page_image){
-          echo "<img src='admin/uploads/$dbFetch->page_image'></img>";
-        }
-    }else{
-        echo "Couldn't fetch Object";
-    }
+      
+      
+
+      /*if($dbFetch->page_image){
+        echo "<img class='img-fluid rounded mx-auto d-block user-page-img' src='admin/uploads/$dbFetch->page_image'></img>";
+      }*/
+  }/*else{
+      echo "Couldn't fetch Object";
+  }*/
+  //echo "<p>$dbFetch->page_content</p>";
+
+
+    
+
 ?> 
 
 <!-- MAIN END -->

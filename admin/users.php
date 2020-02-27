@@ -348,10 +348,10 @@ function login($db){
                 $_SESSION["logged_in"] = true; 
                 $_SESSION["admin"] = $dbFetch->admin_name; 
             }else{
-                $error = 'Wrong username or password';
+                $error = 'Forkert brugernavn eller kodeord';
             }
         }else{
-            $error = 'Wrong username or password';
+            $error = 'Forkert brugernavn eller kodeord';
                 echo $db->error;
         }
     }
