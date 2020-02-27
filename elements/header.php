@@ -6,7 +6,7 @@ include('config.php');
 <!-- HEADER START -->
   <header>
     <!-- BOOTSTRAP NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-oko-green">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-oko-green">
   <a class="navbar-brand header-logo-container position-relative" href="index.php">
   <div class="container header-logo d-flex justify-content-center align-items-center">
   <p class="h1">Den lille Gårdbutik</p>

@@ -22,7 +22,7 @@
 
   <div class="container produkter">
   <h1 class='big-h1'>PRODUKTER</h1>
-<div class="card-deck">
+<div class="card-deck justify-content-center p-2">
   
   <?php
 //UDSKRIV PRODUKTERNE TIL SIDEN
