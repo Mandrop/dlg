@@ -146,6 +146,18 @@ include ('elements/header.php');
 
 <!-- MAIN END -->
 </main>
+
+<!-- IMAGE GALLERY BOTTOM -->
+<div class="container-fluid p-0 mb-5 d-flex image-gallery-bottom">
+
+    <img src="images/citrus-frugter.jpg" alt="">
+    <img src="images/ko.jpg" alt="">
+
+</div>
+
+<!-- IMAGE GALLERY BOTTOM -->
+
+
     <!-- FOOTER START -->
     <?php
   include('elements/footer.php')

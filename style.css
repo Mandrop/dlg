@@ -276,6 +276,19 @@ header {
 
 /* PRODUCT INFO END */
 
+/* IMAGE GALLERY - BOTTOM */
+.image-gallery-bottom {
+  width: 100%;
+  height: 200px;
+}
+
+.image-gallery-bottom img{
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+/* IMAGE GALLERY - BOTTOM */
+
 /* FOOTER */
 footer {
   padding: 25px 0 50px 0;
