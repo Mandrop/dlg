@@ -69,7 +69,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price ?></p>
+      <p class='price'><?php echo $price . " kr."; ?></p>
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[0]);  ?>" class="read-more">Læs mere</a>
       <a href="#" class="green">LÆG I KURV</a>
@@ -105,7 +105,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price ?></p>
+      <p class='price'><?php echo $price . " kr."; ?></p>
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[1]);  ?>" class="read-more">Læs mere</a>
       <a href="#" class="green">LÆG I KURV</a>
@@ -141,7 +141,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price ?></p>
+      <p class='price'><?php echo $price . " kr."; ?></p>
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[2]);  ?>" class="read-more">Læs mere</a>
       <a href="#" class="green">LÆG I KURV</a>
