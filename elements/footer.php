@@ -31,7 +31,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
 }
 
 ?>
-<div class="container contact-info">
+<div class="container-fluid contact-info">
   <div class="row">
     <div class="col">
       <span class='fake-heading'><p>Adresse</p></span>

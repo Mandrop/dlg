@@ -22,7 +22,7 @@ include('functions.php');
     <title>Projekt</title>
   </head>
 
-  <body>
+  <body class="">
   <!-- CHECK IF ON INDEX -->
   <?php
   indexRedirect();
@@ -34,7 +34,7 @@ include ('elements/header.php');
 <!-- HEADER END -->
 
 <!-- MAIN CONTENT  -->
-<main class="container main-content shadow">
+<main class="container-fluid main-content shadow">
 
 
   <!-- Bootstrap Navbar -->

@@ -375,7 +375,13 @@ function login($db){
                 
             </form>
             </div>
+        </div>
+        
+        <div class='login-logo-dlg rounded-circle border-3 border-white d-flex justify-content-center align-items-center mx-auto'>
+            <p>DEN LILLE <br>GÅRDBUTIK</p>
         </div>";
+
+
 
 
 

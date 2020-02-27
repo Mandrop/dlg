@@ -257,3 +257,20 @@ nav {
 }
 
 /* FREDE ADMIN CSS SLUT */
+
+/* LOGIN PAGE */
+
+.login-logo-dlg{
+height: 200px;
+width: 200px;
+color: white;
+font-size: 20px;
+text-align: center;
+}
+
+/* LOGIN PAGE */
+
+.border-3{
+  border-width: 5px!important;
+  border-style: solid;
+}
