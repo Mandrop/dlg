@@ -7,6 +7,7 @@ include('login.php');
 include('messages.php');
 include('products.php');
 include('contact_information.php');
+include('news.php');
 /*
 $sessionName = $_SESSION['admin'];
 

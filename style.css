@@ -197,8 +197,22 @@ header {
 
 /* NEWS */
 .news-section {
-  margin: 100px auto 50px auto;
-  width: 90%;
+  /* margin: 100px auto 50px auto; */
+/*   width: 90%; */
+}
+
+.news-section .card{
+  border: none;
+  background-color: transparent;
+}
+
+.news-section .row{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.news-section .news-title-text{
+  
 }
 .news-deck {
   margin: 25px 0 25px 0;
