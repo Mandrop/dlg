@@ -129,7 +129,7 @@ function create_news($db){
 
 function update_news($db){
 
-    $news_id = $_GET['nyheds_id'];
+    $news_id = $_GET['news_id'];
 
     // HENT DATA
     $sql = "SELECT * FROM news WHERE news_id = '$news_id' ";
@@ -209,22 +209,22 @@ function update_news($db){
             $time = date("H:i");
             $date = date("d.m.y");
 
-            $sql = "UPDATE products SET
+            $sql = "UPDATE news SET
                 news_title = '$varNewsTitle',
                 news_content = '$varNewsContent',
                 news_image = '$image_dir$fileName',
                 news_time = '$time',
-                news_date = '$date';
+                news_date = '$date'
                 WHERE news_id = '$news_id';
                 ";
 
             if($db->query($sql)){
                 if (move_uploaded_file($_FILES["formFile"]["tmp_name"], $target_file)) {
-                        echo "Produktet er blevet opdateret<br>";
+                        echo "Nyheden er blevet opdateret<br>";
                         //echo "Billedet: ". basename( $_FILES["formFile"]["name"]). " er blevet uploadet.";
 
                 } elseif($fileName == $dbFetch->news_image) {
-                        echo "Produktet er blevet opdateret<br>";                
+                        echo "Nyheden er blevet opdateret<br>";                
                     }else{
                 echo "Sorry, there was an error uploading your file.";
                 }
@@ -234,8 +234,8 @@ function update_news($db){
 
     echo "
     <form method='post' enctype='multipart/form-data'>
-        <input type='text' name='formProductTitle' value='$dbFetch->news_title'</input><br>
-        <textarea name='formProductContent'>$dbFetch->news_content</textarea><br>
+        <input type='text' name='formNewsTitle' value='$dbFetch->news_title'</input><br>
+        <textarea name='formNewsContent'>$dbFetch->news_content</textarea><br>
         <input type='file' name='formFile'></input><br>
         <input type='submit' name='formSubmit' value='OPDATER'>
     </form>
@@ -246,9 +246,9 @@ function update_news($db){
 
 function delete_news($db){
 
-    $product_id = $_GET['produkt_id'];
+    $news_id = $_GET['news_id'];
 
-    $sql = "SELECT * FROM products where product_id=$product_id";
+    $sql = "SELECT * FROM news where news_id=$news_id";
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
@@ -259,17 +259,17 @@ function delete_news($db){
 
     if(isset($_POST['formSubmit'])){
 
-        $sql = "DELETE FROM products Where product_id=$product_id";
+        $sql = "DELETE FROM news Where news_id=$news_id";
         $sqlQuery = $db->query($sql);
 
         if($sqlQuery){
-            unlink($target_dir . $dbFetch->product_image);
-            echo "Produktet er slettet!";
+            unlink($target_dir . $dbFetch->news_image);
+            echo "Nyheden er slettet!";
         }
     }else{
 
     echo "
-    <h1>Er du sikker på, at du vil slette: " . $dbFetch->product_title . " ?</h1>
+    <h1>Er du sikker på, at du vil slette: " . $dbFetch->news_title . " ?</h1>
     <form method='post'>
         <input type='submit' name='formSubmit' value='SLET'>
     </form>

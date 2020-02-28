@@ -2,8 +2,8 @@
 
 <?php
 
-    $id = $_GET['id'];
-    $page = $_GET['page'];
+    /* $id = $_GET['id']; */
+   /*  $page = $_GET['page']; */
 
     // HENT DATA
     $sql = "SELECT * FROM products";
@@ -74,9 +74,9 @@
   <div class="card">
     <img class="card-img-top" src="images/mel2.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"><?php echo "$dbFetch->product_title"; ?>Økologisk hvedemel</h5>
-      <p class="card-text"><?php echo "$dbFetch->product_content"; ?>... <a href="" class="read-more">Læs mere</a></p>
-      <p class='price'><?php echo "$dbFetch->product_price"; ?> kr</p>
+      <h5 class="card-title"> Økologisk hvedemel</h5>
+      <p class="card-text"> ... <a href="" class="read-more">Læs mere</a></p>
+      <p class='price'>  kr</p>
       <a href="#" class="fake-btn">LÆG I KURV</a>
     </div> 
     -->
