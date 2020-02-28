@@ -21,7 +21,7 @@
   <div class="row no-gutters">
     <div class="col-md-6">
      
-      <img class="bd-placeholder-img news-img"  src="<?php echo "$dbFetch->news_image" ?>" alt="">
+      <img class="bd-placeholder-img news-img rounded"  src="<?php echo "$dbFetch->news_image" ?>" alt="">
 
     </div>
     <div class="col-md-6 ">
@@ -29,9 +29,7 @@
         <h1 class="card-title red-header h1 product-info-title"><?php echo "$dbFetch->news_title"; ?></h1>
              
         <div class="card-text-news-container">
-   <!--      <p class="h3">Produktbeskrivelse</p> -->
         <p class="card-text"><?php echo "$dbFetch->news_content"; ?></p>
-       <!--  <a href='' class='fake-btn'>LÆG I KURV</a> -->
  
         </div>
       </div>

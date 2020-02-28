@@ -62,7 +62,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
 <?php
 sendMessage($db)
 ?>
-<form method='post'>
+<form id='send-os-en-besked'method='post'>
   <p class='big-paragraph'>Send os en besked</p>
   <input class='d-block' type="text" placeholder='Navn' value='<?php echo $_SESSION['form_name'];  ?>' name='formName'></input>
   <?php

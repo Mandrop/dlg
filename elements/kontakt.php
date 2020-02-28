@@ -7,6 +7,9 @@ if($dbFetch = $sqlQuery->fetch_object()){
 
 ?>
 <h1 class="big-h1">KONTAKT</h1>
+<div class="d-flex justify-content-center">
+<a href="#send-os-en-besked" type="button" class="btn btn-oeko-green">Send os en besked</a>
+</div>
 <div class="jumbotron jumbotron-fluid bg-white shadow-sm">
   <div class="container d-flex flex-column align-items-center">
     
@@ -48,7 +51,10 @@ if($dbFetch = $sqlQuery->fetch_object()){
         <?php echo $dbFetch->contact_sunday ?><br>
         </p>
         </div>
+
 </div>
+
+
 
 
 
