@@ -97,8 +97,20 @@ if($sqlQuery){
     ?>
   >
     
+  <?php
+
+  //$x = 'false';
+  //if($x == 'true'){
+    if(isset($_GET['page'])){
+      $page = $_GET['page'];
+    }else{
+      $page = "";
+    }
+    if($page != 'login'){
+  ?>
 
   <!-- Bootstrap Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
   <a class="navbar-brand" href="index.php">Ad<i>Sys</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -238,6 +250,13 @@ if($sqlQuery){
     ?>
   </div>
 </nav>
+<!-- NAVIGATION END -->
+<?php
+
+
+}
+
+?>
 
 <!-- Main site content goes here -->
 <main>
