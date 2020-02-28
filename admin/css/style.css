@@ -42,8 +42,8 @@ body {
   background-color: #fff;
 }
 #admin-name {
-  background: #329d9c;
-  border: #329d9c;
+  background: #374a00;
+  border: #374a00;
   color: #ffffff;
 }
 
@@ -122,7 +122,7 @@ user agent stylesheet html {
 main {
 }
 nav {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(55, 74, 0, 0.8);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -281,4 +281,11 @@ nav {
 .border-3 {
   border-width: 5px !important;
   border-style: solid;
+}
+
+.contact-information-form {
+  margin-top: 80px;
+}
+.margin-top {
+  margin-top: 50px;
 }

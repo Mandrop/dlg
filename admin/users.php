@@ -344,7 +344,7 @@ function login($db){
         if(mysqli_num_rows($sqlQuery) > 0){
             $dbFetch = $sqlQuery->fetch_object();
             if(password_verify($_POST['formPassword'], $dbFetch->admin_password)){
-                header('Location: index.php');
+                header('Location: ?page=list_pages');
                 $_SESSION["logged_in"] = true; 
                 $_SESSION["admin"] = $dbFetch->admin_name; 
             }else{
@@ -386,6 +386,7 @@ function login($db){
         </div>
         
         ";
+        
 
 
 

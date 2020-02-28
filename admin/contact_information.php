@@ -52,9 +52,9 @@ function contact_information($db){
 
     }
 
-    echo "<div class='text-center'><h1>Kontaktinformationer</h1></div>";
+    //echo "<div class='text-center'><h1>Kontaktinformationer</h1></div>";
     echo "
-    <form method='post'>
+    <form method='post' class='contact-information-form'>
 
     <div class='form-group row'>
       <div class='col-sm-6'>
@@ -85,7 +85,7 @@ function contact_information($db){
       </div>
     </div>
     <br>
-    <h2 class='text-center'>Åbningstider</h2>
+    <h3 class='text-center'>Åbningstider (mandag-søndag)</h3>
     <div class='form-group row'>
       <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
       <div class='col-sm-6'>
