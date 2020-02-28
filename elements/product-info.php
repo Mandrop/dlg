@@ -66,9 +66,6 @@
  
 </div>
 
-<!--  
-
- -->
  <!-- BOOTSTRAP NEWS CARD END -->
 
  </div>

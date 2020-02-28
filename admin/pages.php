@@ -341,5 +341,9 @@ function produkt_info($db){
     include ('elements/product-info.php');
 }
 
+function nyheds_info($db){
+    include ('elements/news-info.php');
+}
+
 
 ?>
