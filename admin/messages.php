@@ -4,7 +4,7 @@ function beskeder($db){
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
-        echo "<div class='text-center'><h1>Beskeder</h1></div>";
+        //echo "<div class='text-center'><h1>Beskeder</h1></div>";
         echo "
         <table class='table table-striped'>
         <thead>

@@ -83,6 +83,9 @@ if($sqlQuery){
     <title>AdSys</title>
   </head>
 
+  <?php
+  indexAdminRedirect();
+      ?>
 <!-- Change background on login screen -->
   <body
     <?php
@@ -305,7 +308,7 @@ echo "<form method='post'>
 
 ?>
 
-<div class="container main">
+<div class="container main margin-top">
 <?php 
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
 

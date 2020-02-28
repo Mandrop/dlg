@@ -241,7 +241,7 @@ function list_pages($db){
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
-        echo "<div class='text-center'><h1>Side oversigt</h1></div>";
+        //echo "<div class='text-center'><h1>Side oversigt</h1></div>";
         echo "
         <table class='table table-striped'>
         <thead>
@@ -345,5 +345,16 @@ function nyheds_info($db){
     include ('elements/news-info.php');
 }
 
+function indexAdminRedirect(){
+    $page = $_GET['page'];
+
+    // IF ?PAGE IS FOUND IN URL
+    if(!$page){
+        // IF NO ?PAGE IS FOUND IN URL THEN TAKE CURRENT URL AND ADD ?PAGE=INDEX.PHP AT THE END
+        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $urlNew = $url . '?page=list_pages';
+        header('Location: ' . $urlNew);
+    }
+}
 
 ?>
