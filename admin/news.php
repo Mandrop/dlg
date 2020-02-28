@@ -206,16 +206,16 @@ function update_news($db){
             
             $varNewsTitle = $_POST['formNewsTitle'];
             $varNewsContent = $_POST['formNewsContent'];
-            $varProductPrice = $_POST['formProductPrice'];
-            $news_time = '$time',
-            $news_date = '$date';
+            $time = date("H:i");
+            $date = date("d.m.y");
 
             $sql = "UPDATE products SET
-                product_title = '$varProductTitle',
-                product_content = '$varProductContent',
-                product_price = '$varProductPrice',
-                product_image = '$image_dir$fileName'
-                WHERE product_id = '$product_id';
+                news_title = '$varNewsTitle',
+                news_content = '$varNewsContent',
+                news_image = '$image_dir$fileName',
+                news_time = '$time',
+                news_date = '$date';
+                WHERE news_id = '$news_id';
                 ";
 
             if($db->query($sql)){
@@ -223,7 +223,7 @@ function update_news($db){
                         echo "Produktet er blevet opdateret<br>";
                         //echo "Billedet: ". basename( $_FILES["formFile"]["name"]). " er blevet uploadet.";
 
-                } elseif($fileName == $dbFetch->product_image) {
+                } elseif($fileName == $dbFetch->news_image) {
                         echo "Produktet er blevet opdateret<br>";                
                     }else{
                 echo "Sorry, there was an error uploading your file.";
@@ -234,13 +234,12 @@ function update_news($db){
 
     echo "
     <form method='post' enctype='multipart/form-data'>
-        <input type='text' name='formProductTitle' value='$dbFetch->product_title'</input><br>
-        <textarea name='formProductContent'>$dbFetch->product_content</textarea><br>
-        <input type='text' name='formProductPrice' value='$dbFetch->product_price'</input><br>
+        <input type='text' name='formProductTitle' value='$dbFetch->news_title'</input><br>
+        <textarea name='formProductContent'>$dbFetch->news_content</textarea><br>
         <input type='file' name='formFile'></input><br>
         <input type='submit' name='formSubmit' value='OPDATER'>
     </form>
-  <img class='product-list-img rounded' src='../$dbFetch->product_image'>
+  <img class='product-list-img rounded' src='../$dbFetch->news_image'>
     ";
 }
 
