@@ -63,23 +63,23 @@ function create_news($db){
                     }
                     // Check if file already exists
                     if (file_exists($target_file)) {
-                        echo "Sorry, file already exists.";
+                      /*   echo "Sorry, file already exists."; */
                         $uploadOk = 0;
                     }
                     // Check file size
                     if ($_FILES["formFile"]["size"] > 500000) {
-                        echo "Sorry, your file is too large.";
+                        /* echo "Sorry, your file is too large."; */
                         $uploadOk = 0;
                     }
                     // Allow certain file formats
                     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                     && $imageFileType != "gif" ) {
-                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                       /*  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; */
                         $uploadOk = 0;
                     }
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
+                        /* echo "Sorry, your file was not uploaded."; */
                     // if everything is ok, try to upload file
                     }
             }
@@ -187,18 +187,18 @@ function update_news($db){
                     }
                     // Check file size
                     if ($_FILES["formFile"]["size"] > 500000) {
-                        echo "Sorry, your file is too large.";
+                       /*  echo "Sorry, your file is too large."; */
                         $uploadOk = 0;
                     }
                     // Allow certain file formats
                     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                     && $imageFileType != "gif" ) {
-                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                       /*  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; */
                         $uploadOk = 0;
                     }
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
+                       /*  echo "Sorry, your file was not uploaded."; */
                     // if everything is ok, try to upload file
                     }
             }
@@ -337,46 +337,7 @@ function list_news($db){
 
 
 
-    ////////////////////////////////////
-}
-/* function navigation($db){
-    $sql = "SELECT * FROM admin_pages";
-    $sqlQuery = $db->query($sql);
-
-    if($sqlQuery){
-        while($dbFetch = $sqlQuery->fetch_object()){
-            echo "
-                <li class='nav-item'>
-                    <a class='nav-link' href='$dbFetch->page_link'>$dbFetch->page_title  
-                </li>
-            ";
-        }
-    }
-
+ 
 }
 
-function forside($db){
-       
-    include ('elements/udvalgte-produkter.php');
-        include ('elements/news-section.php');
-}
-
-function produkter($db){
-    
-    include ('elements/product-section.php');
-}
-
-function om_os($db){
-    include ('elements/om-os.php');
-}
-
-function kontakt($db){
-    include ('elements/kontakt.php');
-}
-
-function produkt_info($db){
-    include ('elements/product-info.php');
-}
-
- */
 ?>
