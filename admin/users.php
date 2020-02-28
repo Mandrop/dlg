@@ -357,9 +357,17 @@ function login($db){
     }
 
     echo "
+    
         <div class='login-page'>
         <div class='form rounded'>
         <form class='login-form' method='post'>
+
+        <!-- BUTIKSNAVN -->
+        <div class='login-logo-dlg rounded-circle border-3 border-white d-flex justify-content-center align-items-center mx-auto'>
+            <p>DEN LILLE <br>GÅRDBUTIK</p>
+        </div>
+        <!-- BUTIKSNAVN END-->
+        
             
             <input type='text' name='formName' placeholder='username'/>
             
@@ -377,9 +385,7 @@ function login($db){
             </div>
         </div>
         
-        <div class='login-logo-dlg rounded-circle border-3 border-white d-flex justify-content-center align-items-center mx-auto'>
-            <p>DEN LILLE <br>GÅRDBUTIK</p>
-        </div>";
+        ";
 
 
 
