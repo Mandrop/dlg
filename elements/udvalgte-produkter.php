@@ -56,9 +56,13 @@ if($dbFetch = $sqlQuery->fetch_object()){
 
 
   ?>
+  
   <div class="card product-card shadow-sm">
+    <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[0]);  ?>" class="stretched-link product-link">
     <img class="card-img-top" src="<?php /*images/mel2.jpg*/ echo $image ?>" alt="Card image cap">
     <div class="card-body">
+    
+    
       <h5 class="card-title"><?php
 
       
@@ -69,13 +73,19 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price . " kr."; ?></p>
+      </a>
+      <p class='price text-decoration-none'><?php echo $price . " kr."; ?></p>
+      
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[0]);  ?>" class="read-more">Læs mere</a>
-      <a href="#" class="green">LÆG I KURV</a>
+      <a href="#" class="green i-kurv">LÆG I KURV</a>
       </div>
     </div>
+    
   </div>
+  
+  
+  
   <?php
 
 $sql = "SELECT product_title, product_price, product_image FROM products WHERE product_id='$randId[1]'";
@@ -92,9 +102,13 @@ if($dbFetch = $sqlQuery->fetch_object()){
 
 
   ?>
+  
   <div class="card product-card shadow-sm">
+    <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[1]);  ?>" class="stretched-link product-link">
     <img class="card-img-top" src="<?php /*images/mel2.jpg*/ echo $image ?>" alt="Card image cap">
     <div class="card-body">
+    
+    
       <h5 class="card-title"><?php
 
       
@@ -105,13 +119,19 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price . " kr."; ?></p>
+      </a>
+      <p class='price text-decoration-none'><?php echo $price . " kr."; ?></p>
+      
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[1]);  ?>" class="read-more">Læs mere</a>
-      <a href="#" class="green">LÆG I KURV</a>
+      <a href="#" class="green i-kurv ">LÆG I KURV</a>
       </div>
     </div>
+    
   </div>
+  
+  
+  
   <?php
 
 $sql = "SELECT product_title, product_price, product_image FROM products WHERE product_id='$randId[2]'";
@@ -128,9 +148,13 @@ if($dbFetch = $sqlQuery->fetch_object()){
 
 
   ?>
-  <div class="card product-card shadow-sm">
+
+<div class="card product-card shadow-sm">
+    <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[2]);  ?>" class="stretched-link product-link">
     <img class="card-img-top" src="<?php /*images/mel2.jpg*/ echo $image ?>" alt="Card image cap">
     <div class="card-body">
+    
+    
       <h5 class="card-title"><?php
 
       
@@ -141,13 +165,35 @@ if($dbFetch = $sqlQuery->fetch_object()){
     
       </h5>
       <p class="card-text"> </p>
-      <p class='price'><?php echo $price . " kr."; ?></p>
+      </a>
+      <p class='price text-decoration-none'><?php echo $price . " kr."; ?></p>
+      
       <div class='d-flex justify-content-between'>
       <a href="<?php echo "?page=produkt_info&product_id=" . ($randId[2]);  ?>" class="read-more">Læs mere</a>
-      <a href="#" class="green">LÆG I KURV</a>
+      <a href="#" class="green i-kurv">LÆG I KURV</a>
       </div>
     </div>
+    
   </div>
+  
+  
+  
+  <?php
+
+$sql = "SELECT product_title, product_price, product_image FROM products WHERE product_id='$randId[1]'";
+$sqlQuery = $db->query($sql);
+
+
+if($dbFetch = $sqlQuery->fetch_object()){
+  $title = $dbFetch->product_title;
+  $price = $dbFetch->product_price;
+  $image = $dbFetch->product_image;
+}
+
+
+
+
+  ?>
   
 
 
@@ -177,6 +223,7 @@ if($dbFetch = $sqlQuery->fetch_object()){
     </div>
   </div>
 -->
+</div>
 </div>
 
 

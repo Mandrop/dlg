@@ -44,14 +44,17 @@
 //TEXT FORKORTER SLUT
 
         echo "
-  <div class='card'>
+  <div class='card product-card shadow-sm'>
+  <a href='?page=produkt_info&product_id=$dbFetch->product_id' class='stretched-link product-link'>
     <img class='card-img-top' src='$dbFetch->product_image' alt='Card image cap'>
     <div class='card-body'>
       <h5 class='card-title'> $dbFetch->product_title </h5>
-      <p class='card-text'>$string <a class='read-more' href='?page=produkt_info&product_id=$dbFetch->product_id'>Læs Mere</a></p>
-      <p class='price'>$dbFetch->product_price kr.</p>
-      <a href='' class='fake-btn'>LÆG I KURV</a>
+      </a>
+      <p class='card-text'>$string <a class='read-more above' href='?page=produkt_info&product_id=$dbFetch->product_id'>Læs Mere</a></p>
+      <p class='price text-decoration-none'>$dbFetch->product_price kr.</p>
+      <a href='#' class='fake-btn above'>LÆG I KURV</a>
     </div>
+    
   </div>
         ";
     } 

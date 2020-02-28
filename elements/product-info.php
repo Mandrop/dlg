@@ -26,12 +26,11 @@
     </div>
     <div class="col-md-6 ">
       <div class="card-body">
-        <h1 class="card-title red-header h1"><?php echo "$dbFetch->product_title"; ?></h1>
+        <h1 class="card-title red-header h1 product-info-title"><?php echo "$dbFetch->product_title"; ?></h1>
               <p class='price'><?php echo "$dbFetch->product_price"; ?> kr. <span class="font-weight-lighter">inkl. moms</span> </p>
         <div class="card-text-news-container">
         <p class="h3">Produktbeskrivelse</p>
         <p class="card-text"><?php echo "$dbFetch->product_content"; ?></p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
         <a href='' class='fake-btn'>LÆG I KURV</a>
  
         </div>
