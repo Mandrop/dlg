@@ -31,7 +31,6 @@
         <div class="card-text-news-container">
         <p class="h3">Produktbeskrivelse</p>
         <p class="card-text"><?php echo "$dbFetch->product_content"; ?></p>
-        <p class="card-text"><small class="lightgrey">20.FEB.2020</small></p>
         <a href='' class='fake-btn'>LÆG I KURV</a>
  
         </div>
