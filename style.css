@@ -115,16 +115,26 @@ header {
   color: #374a00;
   text-align: center;
 }
+.product-info-title {
+  font-weight: 900 !important;
+  font-size: 3.3rem;
+}
 .card-text {
 }
 .read-more {
   color: #ec5f65;
+  z-index: 1000;
+}
+.read-more:hover {
+  color: #ec5f65;
 }
 .price {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
+  color: #374a00;
 }
+
 .fake-btn {
   padding: 10px;
   background-color: #374a00;
@@ -137,6 +147,8 @@ header {
 }
 
 .product-card {
+  position: relative;
+
   /*width: 50px;*/
   /*
   box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
@@ -144,6 +156,25 @@ header {
   -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
   */
   border: none;
+}
+.product-link {
+  color: #374a00;
+}
+.product-link:hover {
+  color: #374a00;
+}
+.i-kurv {
+  z-index: 1000;
+}
+.above {
+  z-index: 100000;
+  position: relative;
+}
+.above:hover {
+  text-decoration: underline;
+}
+.i-kurv:hover {
+  color: #374a00;
 }
 /* MAIN CONTENT */
 
