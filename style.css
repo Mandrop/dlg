@@ -272,6 +272,10 @@ header {
 .card-text-news {
   font-size: 1.1rem;
 }
+
+.news-section .read-more{
+  color: wheat!important;
+}
 /* NEWS */
 
 /* PRODUCT INFO */
