@@ -43,29 +43,29 @@ function create_product($db){
                             echo "File is an image - " . $check["mime"] . ".<br>";
                             $uploadOk = 1;
                         } else {
-                            echo "File is not an image.";
+                            /* echo "File is not an image."; */
                             $uploadOk = 0;
                         }
                     }
                     // Check if file already exists
                     if (file_exists($target_file)) {
-                        echo "Sorry, file already exists.";
+                        /* echo "Sorry, file already exists."; */
                         $uploadOk = 0;
                     }
                     // Check file size
                     if ($_FILES["formFile"]["size"] > 500000) {
-                        echo "Sorry, your file is too large.";
+                        /* echo "Sorry, your file is too large."; */
                         $uploadOk = 0;
                     }
                     // Allow certain file formats
                     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                     && $imageFileType != "gif" ) {
-                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                        /* echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; */
                         $uploadOk = 0;
                     }
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
+                        /* echo "Sorry, your file was not uploaded."; */
                     // if everything is ok, try to upload file
                     }
             }
@@ -134,13 +134,13 @@ function update_product($db){
     if(isset($_POST['formSubmit'])){
 
         if(empty($_POST['formProductTitle'])){
-            echo "Title field is empty";
+            echo "Produkt titel er tom";
         }
         if(empty($_POST['formProductContent'])){
-            echo "Content field is empty";
+            echo "Produkt beskrivelse er tom";
         }
         if(empty($_POST['formProductPrice'])){
-            echo "Pris field is empty";
+            echo "Pris felt er tomt";
         }
 
         if(!empty($_POST['formProductTitle']) && !empty($_POST['formProductContent']) && !empty($_POST['formProductPrice'])){
@@ -182,18 +182,18 @@ function update_product($db){
                     }
                     // Check file size
                     if ($_FILES["formFile"]["size"] > 500000) {
-                        echo "Sorry, your file is too large.";
+                       /*  echo "Sorry, your file is too large."; */
                         $uploadOk = 0;
                     }
                     // Allow certain file formats
                     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                     && $imageFileType != "gif" ) {
-                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                       /*  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; */
                         $uploadOk = 0;
                     }
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
+                      /*   echo "Sorry, your file was not uploaded."; */
                     // if everything is ok, try to upload file
                     }
             }
@@ -277,7 +277,7 @@ function list_products($db){
     $sqlQuery = $db->query($sql);
 
     if($sqlQuery){
-        //echo "<div class='text-center'><h1>Produkt oversigt</h1></div>";
+
         echo "
         <table class='table table-striped'>
         <thead>
@@ -331,46 +331,7 @@ function list_products($db){
 
 
 
-    ////////////////////////////////////
-}
-/* function navigation($db){
-    $sql = "SELECT * FROM admin_pages";
-    $sqlQuery = $db->query($sql);
-
-    if($sqlQuery){
-        while($dbFetch = $sqlQuery->fetch_object()){
-            echo "
-                <li class='nav-item'>
-                    <a class='nav-link' href='$dbFetch->page_link'>$dbFetch->page_title  
-                </li>
-            ";
-        }
-    }
-
+   
 }
 
-function forside($db){
-       
-    include ('elements/udvalgte-produkter.php');
-        include ('elements/news-section.php');
-}
-
-function produkter($db){
-    
-    include ('elements/product-section.php');
-}
-
-function om_os($db){
-    include ('elements/om-os.php');
-}
-
-function kontakt($db){
-    include ('elements/kontakt.php');
-}
-
-function produkt_info($db){
-    include ('elements/product-info.php');
-}
-
- */
 ?>

@@ -58,9 +58,11 @@ function contact_information($db){
 
     <div class='form-group row'>
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Firmanavn</label>
         <input type='text' name='formContactName' class='form-control' id='colFormLabel' placeholder='Butiksnavn' value='$dbFetch->contact_shop_name'>
       </div>
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Adresse</label>
         <input type='text' name='formContactStreet' class='form-control' id='colFormLabel' placeholder='Gadenavn' value='$dbFetch->contact_street'>
       </div>
     </div>
@@ -69,62 +71,72 @@ function contact_information($db){
 
 
     <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>By og postnummer</label>
         <input type='text' name='formContactCityZip' class='form-control' id='colFormLabel' placeholder='By og postnummer. F.eks. København 1050' value='$dbFetch->contact_city_and_zip'>
       </div>
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Telefon nummer</label>
         <input type='text' name='formContactPhone' class='form-control' id='colFormLabel' placeholder='Telefonnummer' value='$dbFetch->contact_phone'>
       </div>
     </div>
 
     <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>E-mail</label>
         <input type='email' name='formContactEmail' class='form-control' id='colFormLabel' placeholder='Email' value='$dbFetch->contact_email'>
       </div>
     </div>
     <br>
     <h3 class='text-center'>Åbningstider (mandag-søndag)</h3>
     <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Mandag</label>
         <input type='text' name='formContactMonday' class='form-control' id='colFormLabel' placeholder='Mandag F.eks. 09:00 - 17:30' value='$dbFetch->contact_monday'>
       </div>
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Tirsdag</label>
         <input type='text' name='formContactTuesday' class='form-control' id='colFormLabel' placeholder='Tirsdag F.eks. 09:00 - 17:30' value='$dbFetch->contact_tuesday'>
       </div>
     </div>
 
       <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Onsdag</label>
         <input type='text' name='formContactWednesday' class='form-control' id='colFormLabel' placeholder='Onsdag F.eks. 09:00 - 17:30' value='$dbFetch->contact_wednesday'>
       </div>
       <div class='col-sm-6'>
+                  <label for='colFormLabel' class='col-sm-2 col-form-label'>Torsdag</label>
         <input type='text' name='formContactThursday' class='form-control' id='colFormLabel' placeholder='Torsdag F.eks. 09:00 - 17:30' value='$dbFetch->contact_thursday'>
       </div>
       </div>
 
       <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+
       <div class='col-sm-6'>
+            <label for='colFormLabel' class='col-sm-2 col-form-label'>Fredag</label>
         <input type='text' name='formContactFriday' class='form-control' id='colFormLabel' placeholder='Fredag F.eks. 09:00 - 17:30' value='$dbFetch->contact_friday'>
       </div>
       <div class='col-sm-6'>
+            <label for='colFormLabel' class='col-sm-2 col-form-label'>Lørdag</label>
         <input type='text' name='formContactSaturday' class='form-control' id='colFormLabel' placeholder='Lørdag F.eks. 09:00 - 17:30' value='$dbFetch->contact_saturday'>
       </div>
       </div>
 
       <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+    
       <div class='col-sm-6'>
+        <label for='colFormLabel' class='col-sm-2 col-form-label'>Søndag</label>
         <input type='text' name='formContactSunday' class='form-control' id='colFormLabel' placeholder='Søndag F.eks. 09:00 - 17:30' value='$dbFetch->contact_sunday'>
       </div>
       </div>
 
       <div class='form-group row'>
-      <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
+     <!-- <label for='colFormLabel' class='col-sm-2 col-form-label'>Email</label>-->
       <div class='col-sm-12'>
         <input type='submit' name='formContactSubmit' class='form-control' id='colFormLabel' value='Gem ændringer'>
       </div>
