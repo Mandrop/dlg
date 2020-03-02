@@ -19,7 +19,7 @@ include('functions.php');
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Oswald:300,400,500&display=swap" rel="stylesheet">
 
-    <title>Projekt</title>
+    <title>Den lille gårdbutik</title>
   </head>
 
   <body class="">
