@@ -148,7 +148,7 @@ include ('elements/header.php');
 </main>
 
 <!-- IMAGE GALLERY BOTTOM -->
-<div class="container-fluid p-0 mb-5 d-flex image-gallery-bottom">
+<div class="container-fluid p-0 d-flex image-gallery-bottom">
 
     <div class="w-50">
     <img src="images/citrus-frugter.jpg" alt='Citrus frugter'>
